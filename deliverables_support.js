@@ -29,6 +29,7 @@ var extractData = function (ucs, deliverables) {
 				uc: deliverables[i].uc,
 				uc_link: ucsDict[deliverables[i].uc],
 				deliverable: deliverables[i].deliverable,
+				link: deliverables[i].link,
 				type: deliverables[i].type,
 				days: _deltaDays,
 				timer: _deltaDays,
