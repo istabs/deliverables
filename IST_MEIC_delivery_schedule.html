@@ -182,6 +182,12 @@
 	</script>
 
 	<script>
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = today.getMonth();
+		var jsonFile = "" + year + '_' + (month < 6 ? "1": "2") + ".json";
+		console.log(jsonFile);
+
 		fetch('2020_2.json').then((response) => response.json()).then((json) => {
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
