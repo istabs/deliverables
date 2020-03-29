@@ -146,22 +146,25 @@
 	</script>
 
 	<script>
-		console.log("Hello");
+		var log = "log";
+		var count = 0;
+		console.log(log);
 		fetch('2020_2.json')
 		.then((response) => {
 			if (! response.ok) {
-				console.log("HTTP-error: " + response.status)
-				alert("HTTP-error: " + response.status)
+				var message = "HTTP-error: " + response.status;
+				alert(message);
+				throw new Error(message);
 			}
-			console.log("Hello2.1");
+			console.log(log + count++);
 			return response;
 		})
 		.then((data) => {
-			console.log("Hello3.1");
+			console.log(log + count++);
 			console.log(data);
 			var json = JSON.parse(data);
 			console.log(json);
-			console.log("Hello4");
+			console.log(log + count++);
 		})
 	</script>
 
