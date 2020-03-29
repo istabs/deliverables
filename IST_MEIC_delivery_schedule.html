@@ -145,12 +145,12 @@
 		
 	</script>
 	<script>
-		console.log("Hello")
-		fetch("https://istabs.github.io/deliverables/2020_2.json").then((resp) => {
+		console.log("Hello");
+		fetch('https://istabs.github.io/deliverables/2020_2.json').then((response) => {
 			console.log("Hello2.1");
-			console.log(resp);
+			console.log(response);
 			console.log("Hello3");
-			return resp.json();
+			return JSON.stringify(response);
 		}).then((data) => {
 			console.log("Hello4");
 			console.log(data);
