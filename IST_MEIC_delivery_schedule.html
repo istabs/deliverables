@@ -43,7 +43,7 @@
 		Promise.all(files.map((file) => {
 			let res = {};
 			res["file"] = file;
-			res["promise"] = fetch(file);
+			res["promise"] = fetch(file).json();
 			return res;
 		})).then((responses) => {
 			return Promise.all(responses.map((response) => {
@@ -52,7 +52,7 @@
 				console.log(response["file"]);
 				console.log(response["promise"]);
 				let x = response["promise"];
-				res["json"] = x.json();
+				res["json"] = x.text();
 				return res;
 			}));
 		})
