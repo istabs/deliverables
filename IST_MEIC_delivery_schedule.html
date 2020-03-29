@@ -51,7 +51,8 @@
 				res["file"] = response["file"];
 				console.log(response["file"]);
 				console.log(response["promise"]);
-				res["json"] = response["promise"].json();
+				let x = response["promise"];
+				res["json"] = x.json();
 				return res;
 			}));
 		})
