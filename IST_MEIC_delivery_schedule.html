@@ -79,9 +79,7 @@
 				}],
 				columns: [
 					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: (fld) => {
-						console.log(fld);
-						console.log(fld["_cell"]);
-						console.log(fld["l"]);
+						console.log(fld["_cell"]["value"]);
 						return "hello";
 					}}},
 					{ title: "Deliverable", field: "deliverable", },
