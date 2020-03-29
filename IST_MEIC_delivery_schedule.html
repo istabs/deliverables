@@ -61,8 +61,6 @@
 				if (jsonMap[i]["file"] == "fenix_links.json") ucs = jsonMap[i]["json"]
 				if (jsonMap[i]["file"] == dataFileName) json = jsonMap[i]["json"]
 			}
-			console.log(ucs);
-			console.log(json);
 			var ucsMap = {};
 			for (i = 0; i < ucs.length; i++) {
 				ucsMap[ucs[i]["uc"]] = ucs[i];
@@ -81,7 +79,7 @@
 				}],
 				columns: [
 					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: (fld) => {
-						console.log(fld["value"]);
+						console.log(fld["a"]);
 						return "hello";
 					}}},
 					{ title: "Deliverable", field: "deliverable", },
