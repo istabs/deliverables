@@ -50,8 +50,6 @@
 				let res = {};
 				res["file"] = response["file"];
 				res["json"] = await(response["response"]).json();
-				console.log(res["file"]);
-				console.log(res["json"]);
 				return res;
 			}));
 		})
