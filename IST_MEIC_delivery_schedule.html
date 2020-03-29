@@ -144,6 +144,7 @@
 		}
 		
 	</script>
+<!-- 
 	<script>
 		console.log("Hello");
 		fetch('2020_2.json').then((response) => {
@@ -158,6 +159,18 @@
 			console.log(data);
 			console.log("Hello5");
 		})
+	</script>
+-->
+	<script>
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var myObj = JSON.parse(this.responseText);
+				console.log(myObj);
+			}
+		};
+		xmlhttp.open("GET", "2020_2.json", true);
+		xmlhttp.send();
 	</script>
 	<script>
 		var normalizeTimer = function (data) {
