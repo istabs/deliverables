@@ -66,6 +66,8 @@
 			for (i = 0; i < ucs.length; i++) {
 				ucsMap[ucs[i]["uc"]] = ucs[i];
 			}
+			var x = extractData(ucs, json);
+			console.log(x);
 
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
