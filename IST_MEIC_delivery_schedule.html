@@ -62,7 +62,7 @@
 			console.log(json);
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
-				data: extractData(json),
+				data: extractData(ucs, json),
 				tooltips: false,
 				movableColumns: true,
 				responsiveLayout: "hide",
