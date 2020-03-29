@@ -55,9 +55,14 @@
 		})
 		.then((jsonMap) => {
 			console.log(jsonMap);
-			var ucs = jsonMap["fenix_links.json"];
+			let ucs = [];
+			let json = [];
+			let dataFileName = genDataFilename();
+			for (i = 0; i < jsonMap.length; i++) {
+				if (jsonMap[i]["files"] == "fenix_links.json") ucs = jsonMap["json"]
+				if (jsonMap[i]["files"] == dataFileName) json = jsonMap["json"]
+			}
 			console.log(ucs);
-			var json = jsonMap[genDataFilename()];
 			console.log(json);
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
