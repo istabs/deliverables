@@ -81,8 +81,8 @@
 					dir: "asc"
 				}],
 				columns: [
-					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", target: "_blank", urlfiled: "uc_link" }},
-					{ title: "Deliverable", field: "deliverable", formatter: "link", formatterParams: {labelField: "deliverable", target: "_blank", urlfield: "link" }},
+					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", target: "_blank", url: (fld) => ucsMap[fld["_cell"]["value"]]["uc_link"] }},
+					{ title: "Deliverable", field: "deliverable", formatter: "link", formatterParams: {labelField: "deliverable", target: "_blank", urlField: "link" }},
 					{ title: "Deliverable Type", field: "type", width: 112, },
 					{ title: "Due date", field: "dueDate", },
 					{ title: "Days left", field: "days", align: "right", width: 75, },
