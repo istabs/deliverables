@@ -49,6 +49,8 @@
 			return Promise.all(responses.map((response) => {
 				let res = {};
 				res["file"] = response["file"];
+				console.log(response["file"]);
+				console.log(response["promise"]);
 				res["json"] = response["promise"].json();
 				return res;
 			}));
