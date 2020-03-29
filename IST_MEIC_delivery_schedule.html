@@ -188,9 +188,7 @@
 		var semester = month > 1 && month < 6 ? 2 : 1;
 		var lectiveYear = year - (semester == 1 && month > 8 ? 1 : 0);
 		var jsonFile = '' + lectiveYear + '_' + semester + ".json";
-		console.log(jsonFile);
-
-		fetch('2020_2.json').then((response) => response.json()).then((json) => {
+		fetch(jsonFile).then((response) => response.json()).then((json) => {
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
 				data: extractData(json),
