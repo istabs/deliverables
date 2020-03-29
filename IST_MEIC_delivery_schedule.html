@@ -80,7 +80,7 @@
 				columns: [
 					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: (fld) => {
 						console.log(fld["_cell"]["value"]);
-						return "hello";
+						return ucsMap[fld["_cell"]["value"]]["link"];
 					}}},
 					{ title: "Deliverable", field: "deliverable", },
 					{ title: "Deliverable Type", field: "type", width: 112, },
