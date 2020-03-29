@@ -40,7 +40,7 @@
 	</script>
 	<script>
 		var files = ["fenix_links.json", genDataFilename()];
-		Promise.all(files.map((file) => {
+		Promise.all(files.map(async (file) => {
 			let res = {};
 			res["file"] = file;
 			res["promise"] = await(fetch(file)).json();
