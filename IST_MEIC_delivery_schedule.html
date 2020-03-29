@@ -79,7 +79,10 @@
 					dir: "asc"
 				}],
 				columns: [
-					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: (fld) => ucsMap[fld]["link"]}},
+					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: (fld) => {
+						console.log(fld);
+						return "hello";
+					}}},
 					{ title: "Deliverable", field: "deliverable", },
 					{ title: "Deliverable Type", field: "type", width: 112, },
 					{ title: "Due date", field: "dueDate", },
