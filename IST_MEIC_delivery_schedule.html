@@ -147,7 +147,6 @@
 
 	<script>
 		var log = "log";
-		var count = 0;
 		console.log(log);
 		fetch('2020_2.json')
 		.then((response) => {
@@ -156,15 +155,16 @@
 				alert(message);
 				throw new Error(message);
 			}
-			console.log(log + count++);
+			console.log(log + "1");
 			return response;
 		})
+		.then((response) => {
+			return response.text();
+		})
 		.then((data) => {
-			console.log(log + count++);
+			console.log(log + "2");
 			console.log(data);
-			var json = JSON.parse(data);
-			console.log(json);
-			console.log(log + count++);
+			console.log(log + "3");
 		})
 	</script>
 
