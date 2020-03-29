@@ -155,10 +155,7 @@
 				alert(message);
 				throw new Error(message);
 			}
-			console.log(log + "1");
-			return response;
-		})
-		.then((response) => {
+			console.log(log + "1.1");
 			return response.json();
 		})
 		.then((data) => {
