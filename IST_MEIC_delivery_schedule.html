@@ -29,7 +29,7 @@
 	</div>
 
 	<script>
-		var getDataFilename = () => {
+		var genDataFilename = () => {
 			var today = new Date();
 			var year = today.getFullYear();
 			var month = today.getMonth();
@@ -39,7 +39,16 @@
 		}
 	</script>
 	<script>
-		fetch(getDataFilename()).then((response) => response.json()).then((json) => {
+		var files = ["fenix_links.json", genDataFilename()];
+		Promise.all(files.map((url) => fetch(url))).then((responses) => {
+			return Promise.all(responses.map((res) => res.arrayBuffer())).then((buffers) => {
+				return buffers.map((buffer) => this.json());
+			});
+		})
+		.then((jsonMap) => {
+			var ucs = jsonMap["fenix_links.json"];
+			console.log(ucs);
+			var json = jsonMap[genDataFilename()];
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
 				data: extractData(json),
@@ -60,7 +69,7 @@
 					{ title: "Timer", field: "timer", minWidth: 280, formatter: "progress", align: "right", },
 				],
 			});
-		});
+		}).catch((err) => console.log('Errors!', err));
 	</script>
 </body>
 
