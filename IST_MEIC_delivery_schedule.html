@@ -185,7 +185,9 @@
 		var today = new Date();
 		var year = today.getFullYear();
 		var month = today.getMonth();
-		var jsonFile = "" + year + '_' + (month < 6 ? "1": "2") + ".json";
+		var semester = month > 1 && month < 6 ? 2 : 1;
+		var lectiveYear = year - (semester == 1 && month > 8 ? 1 : 0);
+		var jsonFile = '' + lectiveYear + '_' + semester + ".json";
 		console.log(jsonFile);
 
 		fetch('2020_2.json').then((response) => response.json()).then((json) => {
