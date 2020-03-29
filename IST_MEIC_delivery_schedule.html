@@ -42,7 +42,8 @@
 		var files = ["fenix_links.json", genDataFilename()];
 		Promise.all(files.map((url) => fetch(url))).then((responses) => {
 			return Promise.all(responses.map((res) => res.arrayBuffer())).then((buffers) => {
-				return buffers.map((buffer) => this.json());
+				console.log(buffers);
+				return buffers.map((buffer) => buffer.json());
 			});
 		})
 		.then((jsonMap) => {
