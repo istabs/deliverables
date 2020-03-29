@@ -67,14 +67,10 @@
 				ucsMap[ucs[i]["uc"]] = ucs[i];
 			}
 
-			console.log("json");
-			console.log(json);
 			var deliverablesMap = {};
 			for (i = 0; i < json.length; i++) {
 				deliverablesMap[json[i]["deliverable"]] = json[i];
 			}
-			console.log("deliverablesMap");
-			console.log(deliverablesMap);
 
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
@@ -89,11 +85,7 @@
 				}],
 				columns: [
 					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: (fld) => ucsMap[fld["_cell"]["value"]]["link"] }},
-					{ title: "Deliverable", field: "deliverable", formatter: "link", formatterParams: {labelField: "deliverable", url: (fld) => {
-						console.log(fld["_cell"]["value"]);
-						console.log(deliverablesMap[fld["_cell"]["value"]]);
-						return "link";
-					}}},
+					{ title: "Deliverable", field: "deliverable", formatter: "link", formatterParams: {labelField: "deliverable", url: (fld) => deliverablesMap[fld["_cell"]["value"]]["link"] }},
 					{ title: "Deliverable Type", field: "type", width: 112, },
 					{ title: "Due date", field: "dueDate", },
 					{ title: "Days left", field: "days", align: "right", width: 75, },
