@@ -67,11 +67,13 @@
 				ucsMap[ucs[i]["uc"]] = ucs[i];
 			}
 
+			console.log("json");
 			console.log(json);
 			var deliverablesMap = {};
 			for (i = 0; i < json.length; i++) {
 				deliverablesMap[json[i]["Deliverable"]] = json[i];
 			}
+			console.log("deliverablesMap");
 			console.log(deliverablesMap);
 
 			var tabulator = new Tabulator("#dropScheduleHere", {
