@@ -149,7 +149,11 @@
 		console.log("Hello");
 		fetch('2020_2.json')
 		.then((response) => {
-			console.log("Hello2");
+			if (! response.ok) {
+				console.log("HTTP-error: " + response.status)
+				alert("HTTP-error: " + response.status)
+			}
+			console.log("Hello2.1");
 			return response;
 		})
 		.then((data) => {
