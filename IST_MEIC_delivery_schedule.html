@@ -54,9 +54,7 @@
 			}));
 		})
 		.then((jsonMap) => {
-			console.log(jsonMap);
 			var dataFileName = genDataFilename();
-			console.log(dataFileName);
 			var ucs = [];
 			var json = [];
 			for (i = 0; i < jsonMap.length; i++) {
@@ -65,6 +63,10 @@
 			}
 			console.log(ucs);
 			console.log(json);
+			var ucsMap = {};
+			for (i = 0; i < ucs.length; i++) {
+				ucsMap[ucs[i]["uc"]] = ucs[i];
+			}
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
 				data: extractData(ucs, json),
@@ -77,7 +79,7 @@
 					dir: "asc"
 				}],
 				columns: [
-					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: () => "https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre"}},
+					{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link", formatterParams: {labelField: "uc", url: (fld) => ucsMap[fld]["link"]}},
 					{ title: "Deliverable", field: "deliverable", },
 					{ title: "Deliverable Type", field: "type", width: 112, },
 					{ title: "Due date", field: "dueDate", },
