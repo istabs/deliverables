@@ -28,7 +28,7 @@ var extractData = function (ucs, deliverables) {
 			_data.push({
 				uc: deliverables[i].uc,
 				uc_link: ucsDict[deliverables[i].uc].link,
-				deliverable: deliverables[i].deliverable,
+				deliverable: deliverable in deliverables[i] ? deliverables[i].deliverable : "goback.html",
 				link: deliverables[i].link,
 				type: deliverables[i].type,
 				days: _deltaDays,
