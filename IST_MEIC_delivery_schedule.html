@@ -67,11 +67,6 @@
 				ucsMap[ucs[i]["uc"]] = ucs[i];
 			}
 
-			var deliverablesMap = {};
-			for (i = 0; i < json.length; i++) {
-				deliverablesMap[json[i]["deliverable"]] = json[i];
-			}
-
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
 				data: extractData(ucs, json),
