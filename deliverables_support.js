@@ -11,7 +11,11 @@ var normalizeTimer = function (data) {
 	return data
 }
 
-var extractData = function (deliverables) {
+var extractData = function (ucs, deliverables) {
+	let ucsDict = {};
+	for (i = 0; i < ucs.length; i++) {
+		ucsDict[ucs[i].uc] = ucs[i]
+	}
 	var _data = []
 	for (i = 0; i < deliverables.length; i++) {
 		var _dueDate = new Date(deliverables[i].dueDate)
@@ -23,6 +27,7 @@ var extractData = function (deliverables) {
 		if (_deltaDays >= 0)
 			_data.push({
 				uc: deliverables[i].uc,
+				uc_link: ucsDict[deliverables[i].uc],
 				deliverable: deliverables[i].deliverable,
 				type: deliverables[i].type,
 				days: _deltaDays,
