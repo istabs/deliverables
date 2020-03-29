@@ -1,0 +1,32 @@
+[
+	{
+		"uc": "DS",
+		"name": "Ciência de Dados",
+		"nameEn": "Data Science",
+		"link": "https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre"
+	},
+	{
+		"uc": "EA",
+		"name": "Arquitetura Empresarial",
+		"nameEn": "Enterprise Architecture",
+		"link": "https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre"
+	},
+	{
+		"uc": "ISM",
+		"name": "Gestão de Sistemas de Informação",
+		"nameEn": "Information Systems Management",
+		"link": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre"
+	},
+	{
+		"uc": "NL",
+		"name": "Língua Natural",
+		"nameEn": "Natural Language",
+		"link": "https://fenix.tecnico.ulisboa.pt/disciplinas/LN13/2019-2020/1-semestre"
+	},
+	{
+		"uc": "PLID",
+		"name": "Planeamento, Aprendizagem e Decisão Inteligente",
+		"nameEn": "Planning, Learning and Intelligent Decision-Making",
+		"link": "https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre"
+	}
+]
