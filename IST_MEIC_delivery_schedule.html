@@ -149,37 +149,68 @@
 		var log = "log";
 		console.log(log);
 		fetch('2020_2.json')
-		.then((response) => {
-			if (! response.ok) {
-				var message = "HTTP-error: " + response.status;
-				alert(message);
-				throw new Error(message);
-			}
-			console.log(log + "1.1");
-			return response.json();
-		})
-		.then((data) => {
-			console.log(log + "2");
-			console.log(data);
-			console.log(log + "3");
-		})
-	</script>
+		.then((response) => response.json())
+		.then((json) => {
 
-<!-- 
-	<script>
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				var myObj = JSON.parse(this.responseText, function (key, value) {
-					return value;
-				});
-				console.log(myObj);
+			var normalizeTimer = function (data) {
+				var _maxTimer = 0
+				for (i = 0; i < data.length; i++) {
+					if (data[i].timer > _maxTimer) {
+						_maxTimer = data[i].timer
+					}
+				}
+				for (i = 0; i < data.length; i++) {
+					data[i].timer = data[i].timer / _maxTimer * 100
+				}
+				return data
 			}
-		};
-		xmlhttp.open("GET", "2020_2.json", true);
-		xmlhttp.send();
+	
+			var extractData = function (deliverables) {
+				var _data = []
+				for (i = 0; i < deliverables.length; i++) {
+					var _dueDate = new Date(deliverables[i].dueDate)
+					var _dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', _dueDate.getFullYear(), _dueDate
+						.getMonthNr(),
+						_dueDate.getDate(), _dueDate.getHours(), _dueDate.getMinutes(), _dueDate.getWeekNr(), _dueDate
+						.getWeekDay())
+					var _deltaDays = new Date().diff(_dueDate)
+					if (_deltaDays >= 0)
+						_data.push({
+							uc: deliverables[i].uc,
+							deliverable: deliverables[i].deliverable,
+							type: deliverables[i].type,
+							days: _deltaDays,
+							timer: _deltaDays,
+							dueDate: _dueDateString
+						})
+				}
+				normalizeTimer(_data)
+				return _data
+			}
+	
+			var tabulator = new Tabulator("#dropScheduleHere", {
+				layout: "fitDataFill",
+				data: extractData(json),
+				tooltips: false,
+				movableColumns: true,
+				responsiveLayout: "hide",
+				height: 560,
+				initialSort: [{
+					column: "timer",
+					dir: "asc"
+				}],
+				columns: [
+					{ title: "UC", field: "uc", width: 60, headerFilter: true, },
+					{ title: "Deliverable", field: "deliverable", },
+					{ title: "Deliverable Type", field: "type", width: 112, },
+					{ title: "Due date", field: "dueDate", },
+					{ title: "Days left", field: "days", align: "right", width: 75, },
+					{ title: "Timer", field: "timer", minWidth: 280, formatter: "progress", align: "right", },
+				],
+			});
+			})
 	</script>
- -->
+<!-- 
 	<script>
 		var normalizeTimer = function (data) {
 			var _maxTimer = 0
@@ -238,7 +269,7 @@
 			],
 		});
 	</script>
-
+ -->
 </body>
 
 </html>
