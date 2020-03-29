@@ -46,10 +46,10 @@
 			res["response"] = await(fetch(file));
 			return res;
 		})).then((responses) => {
-			return Promise.all(responses.map((response) => {
+			return Promise.all(responses.map(async (response) => {
 				let res = {};
 				res["file"] = response["file"];
-				res["json"] = response["response"].json();
+				res["json"] = await(response["response"]).json();
 				console.log(res["file"]);
 				console.log(res["json"]);
 				return res;
