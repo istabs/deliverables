@@ -48,8 +48,8 @@
 		})).then((responses) => {
 			return Promise.all(responses.map((response) => {
 				let res = {};
-				res["file"] = response.file;
-				res["json"] = response.promise.json();
+				res["file"] = response["file"];
+				res["json"] = response["promise"].json();
 				return res;
 			}));
 		})
