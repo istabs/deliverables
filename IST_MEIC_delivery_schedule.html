@@ -26,68 +26,6 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.2/sprintf.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.4.3/js/tabulator.min.js">
 	</script>
-
-	<!-- PARAMETERS -->
-	<script>
-		var deliverables = [
-
-			{ "uc": "EA", "deliverable": "Homework Bonus #01", "type": "homework", "startDate": "2020/02/19 00:01", "dueDate": "2020/03/01 23:59", },
-			{ "uc": "EA", "deliverable": "Homework Bonus #02", "type": "homework", "startDate": "2020/03/03 00:01", "dueDate": "2020/03/08 23:59", },
-			{ "uc": "EA", "deliverable": "Homework Bonus #03", "type": "homework", "startDate": "2020/03/11 00:01", "dueDate": "2020/03/15 23:59", },
-			{ "uc": "EA", "deliverable": "Homework Bonus #04", "type": "homework", "startDate": "2020/03/17 15:00", "dueDate": "2020/03/22 23:59", },
-			{ "uc": "EA", "deliverable": "Homework Bonus #05", "type": "homework", "startDate": "2020/03/24 14:00", "dueDate": "2020/03/29 23:59", },
-
-			{ "uc": "EA", "deliverable": "Project: Additional Questions", "type": "project", "startDate": "2020/03/04 12:00", "dueDate": "2020/03/13 23:59", },
-			{ "uc": "EA", "deliverable": "Project: 1st delivery", "type": "project", "startDate": "2020/03/04 12:00", "dueDate": "2020/04/03 23:59", },
-			{ "uc": "EA", "deliverable": "Project: Final delivery", "type": "project", "startDate": "2020/04/10 12:00", "dueDate": "2020/05/15 23:59", },
-			{ "uc": "EA", "deliverable": "Project: Presentation", "type": "project", "startDate": "2020/05/16 12:00", "dueDate": "2020/05/19 13:00", },
-			
-			{ "uc": "EA", "deliverable": "Teste: 1º Teste", "type": "exam", "dueDate": "2020/04/17 18:00", "end": "20:00", "room": "A1", },
-			{ "uc": "EA", "deliverable": "Teste: 2º Teste", "type": "exam", "dueDate": "2020/05/27 18:00", "end": "20:00", "room": "A1", },
-			{ "uc": "EA", "deliverable": "Teste: Repescagem", "type": "exam", "dueDate": "2020/07/03 11:30", "end": "14:30", "room": "0 - 16", },
-
-			{ "uc": "EA", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/23 11:30", "end": "14:30", "room": "1 - 4", },
-			{ "uc": "EA", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/23 11:30", "end": "14:30", "room": "F2", },
-
-			{ "uc": "ISM", "deliverable": "Case A", "type": "homework", "startDate": "2020/02/17 13:00", "dueDate": "2020/02/22 13:00", },
-			{ "uc": "ISM", "deliverable": "Case A review", "type": "homework", "startDate": "2020/02/23 08:00", "dueDate": "2020/02/24 23:59", },
-			{ "uc": "ISM", "deliverable": "Case B", "type": "homework", "startDate": "2020/02/24 13:00", "dueDate": "2020/02/29 13:00", },
-			{ "uc": "ISM", "deliverable": "Case B review", "type": "homework", "startDate": "2020/03/01 08:00", "dueDate": "2020/03/02 13:00", },
-			{ "uc": "ISM", "deliverable": "Case C", "type": "homework", "startDate": "2020/03/02 13:00", "dueDate": "2020/03/07 13:00", },
-			{ "uc": "ISM", "deliverable": "Case C review", "type": "homework", "startDate": "2020/03/08 08:00", "dueDate": "2020/03/09 13:00", },
-			{ "uc": "ISM", "deliverable": "Case D", "type": "homework", "startDate": "2020/03/09 13:00", "dueDate": "2020/03/14 13:00", },
-			{ "uc": "ISM", "deliverable": "Case D review", "type": "homework", "startDate": "2020/03/15 08:00", "dueDate": "2020/03/16 13:00", },
-			{ "uc": "ISM", "deliverable": "Case E", "type": "homework", "startDate": "2020/03/16 13:00", "dueDate": "2020/03/21 13:00", },
-			{ "uc": "ISM", "deliverable": "Case E review", "type": "homework", "startDate": "2020/03/22 08:00", "dueDate": "2020/03/24 23:59", },
-			{ "uc": "ISM", "deliverable": "Case F", "type": "homework", "startDate": "2020/03/23 13:00", "dueDate": "2020/03/28 13:00", },
-			{ "uc": "ISM", "deliverable": "Case F review", "type": "homework", "startDate": "2020/03/29 08:00", "dueDate": "2020/03/31 23:59", },
-			{ "uc": "ISM", "deliverable": "Case G", "type": "homework", "startDate": "2020/04/13 13:00", "dueDate": "2020/04/18 13:00", },
-			{ "uc": "ISM", "deliverable": "Case G review", "type": "homework", "startDate": "2020/04/19 08:00", "dueDate": "2020/04/21 23:59", },
-			{ "uc": "ISM", "deliverable": "Case H", "type": "homework", "startDate": "2020/04/20 13:00", "dueDate": "2020/04/25 13:00", },
-			{ "uc": "ISM", "deliverable": "Case H review", "type": "homework", "startDate": "2020/04/26 08:00", "dueDate": "2020/04/28 23:59", },
-			{ "uc": "ISM", "deliverable": "Case I", "type": "homework", "startDate": "2020/05/04 13:00", "dueDate": "2020/05/09 13:00", },
-			{ "uc": "ISM", "deliverable": "Case I review", "type": "homework", "startDate": "2020/05/10 08:00", "dueDate": "2020/05/12 23:59", },
-			{ "uc": "ISM", "deliverable": "Case FINAL", "type": "homework", "startDate": "2020/05/11 13:00", "dueDate": "2020/05/21 18:30", },
-			{ "uc": "ISM", "deliverable": "Case FINAL review", "type": "homework", "startDate": "2020/05/24 08:00", "dueDate": "2020/05/26 23:59", },
-
-			{ "uc": "ISM", "deliverable": "Project: Phase 1 - Assignment 1", "type": "project", "startDate": "2020/03/19 15:30", "dueDate": "2020/04/04 13:00", },
-			{ "uc": "ISM", "deliverable": "Project: Phase 2 - Assignment 2", "type": "project", "startDate": "2020/04/04 15:30", "dueDate": "2020/05/02 13:00", },
-			{ "uc": "ISM", "deliverable": "Project: Phase 3 - Assignment 3", "type": "project", "startDate": "2020/05/02 15:30", "dueDate": "2020/05/27 13:00", },
-			{ "uc": "ISM", "deliverable": "Project: WORKSHOP", "type": "project", "startDate": "2020/05/28 15:30", "dueDate": "2020/05/28 18:30", },
-
-			{ "uc": "ISM", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/22 11:30", "end": "14:30", "room": "1 - 11", },
-			{ "uc": "DS", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/17 9:00", "end": "11:00", "room": "N.D.", },
-		]
-	</script>
-</head>
-
-<body>
-	<div class="container-fluid">
-		<h1>IST/MEIC ABS delivery schedule</h1>
-
-		<div id="dropScheduleHere"></div>
-	</div>
-
 	<!-- JAVASCRIPT FUNCTIONS -->
 	<script>
 		Date.prototype.diff = function (until) {
@@ -180,15 +118,26 @@
 			return _data
 		}
 	</script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<h1>IST/MEIC ABS delivery schedule</h1>
+		<div id="dropScheduleHere"></div>
+	</div>
 
 	<script>
-		var today = new Date();
-		var year = today.getFullYear();
-		var month = today.getMonth();
-		var semester = month > 1 && month < 6 ? 2 : 1;
-		var lectiveYear = year - (semester == 1 && month > 8 ? 1 : 0);
-		var jsonFile = '' + lectiveYear + '_' + semester + ".json";
-		fetch(jsonFile).then((response) => response.json()).then((json) => {
+		var getDataFilename = () => {
+			var today = new Date();
+			var year = today.getFullYear();
+			var month = today.getMonth();
+			var semester = month > 1 && month < 6 ? 2 : 1;
+			var lectiveYear = year - (semester == 1 && month > 8 ? 1 : 0);
+			return '' + lectiveYear + '_' + semester + ".json";
+		}
+	</script>
+	<script>
+		fetch(getDataFilename()).then((response) => response.json()).then((json) => {
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
 				data: extractData(json),
