@@ -149,8 +149,8 @@
 		fetch('2020_2.json').then((response) => {
 			console.log("Hello2");
 			console.log(response);
-			console.log("Hello3.2");
-			var jsonResponse = JSON.stringify(response);
+			console.log("Hello3.3");
+			var jsonResponse = JSON.parse(response);
 			console.log(jsonResponse);
 			return jsonResponse;
 		}).then((data) => {
