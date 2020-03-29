@@ -149,10 +149,10 @@
 		console.log("Hello");
 		fetch('2020_2.json').then((response) => {
 			console.log("Hello2");
-			console.log(response);
-			console.log("Hello3");
 			var jsonResponse = JSON.parse(response);
+			console.log("Hello3");
 			console.log(jsonResponse);
+			console.log("Hello3.1");
 			return jsonResponse;
 		}).then((data) => {
 			console.log("Hello4");
