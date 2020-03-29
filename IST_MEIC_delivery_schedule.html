@@ -147,10 +147,11 @@
 	<script>
 		console.log("Hello");
 		fetch('https://istabs.github.io/deliverables/2020_2.json').then((response) => {
-			console.log("Hello2.1");
+			console.log("Hello2");
 			console.log(response);
 			console.log("Hello3");
-			return JSON.stringify(response);
+			var jsonResponse = JSON.stringify(response);
+			return jsonResponse;
 		}).then((data) => {
 			console.log("Hello4");
 			console.log(data);
