@@ -59,6 +59,7 @@
 			var ucs = jsonMap["fenix_links.json"];
 			console.log(ucs);
 			var json = jsonMap[genDataFilename()];
+			console.log(json);
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
 				data: extractData(json),
