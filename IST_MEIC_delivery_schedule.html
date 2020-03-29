@@ -43,15 +43,15 @@
 		Promise.all(files.map(async (file) => {
 			let res = {};
 			res["file"] = file;
-			res["promise"] = await(fetch(file));
+			res["response"] = await(fetch(file));
 			return res;
 		})).then((responses) => {
 			return Promise.all(responses.map((response) => {
 				let res = {};
 				res["file"] = response["file"];
 				console.log(response["file"]);
-				console.log(response["promise"]);
-				let x = response["promise"];
+				console.log(response["response"].json());
+				let x = response["response"];
 				res["json"] = x.text();
 				return res;
 			}));
