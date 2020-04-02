@@ -17,12 +17,11 @@
 	{ "uc": "EA", "deliverable": "Project: Final delivery", "type": "project", "startDate": "2020/04/10 12:00", "dueDate": "2020/05/15 23:59" },
 	{ "uc": "EA", "deliverable": "Project: Presentation", "type": "project", "startDate": "2020/05/16 12:00", "dueDate": "2020/05/19 13:00" },
 			
-	{ "uc": "EA", "deliverable": "Teste: 1º Teste", "type": "exam", "dueDate": "2020/04/17 18:00", "end": "20:00", "room": "A1" },
-	{ "uc": "EA", "deliverable": "Teste: 2º Teste", "type": "exam", "dueDate": "2020/05/27 18:00", "end": "20:00", "room": "A1" },
-	{ "uc": "EA", "deliverable": "Teste: Repescagem", "type": "exam", "dueDate": "2020/07/03 11:30", "end": "14:30", "room": "0 - 16" },
+	{ "uc": "EA", "deliverable": "Teste: 1º Teste", "type": "exam", "dueDate": "2020/04/17 18:00", "end": "20:00", "room": "T: A1" },
+	{ "uc": "EA", "deliverable": "Teste: 2º Teste", "type": "exam", "dueDate": "2020/05/27 18:00", "end": "20:00", "room": "T: A1" },
+	{ "uc": "EA", "deliverable": "Teste: Repescagem", "type": "exam", "dueDate": "2020/07/03 11:30", "end": "14:30", "room": "A: 0 - 16" },
 
-	{ "uc": "EA", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/23 11:30", "end": "14:30", "room": "1 - 4" },
-	{ "uc": "EA", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/23 11:30", "end": "14:30", "room": "F2" },
+	{ "uc": "EA", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/23 11:30", "end": "14:30", "room": "A: 1 - 4 / T: F2" },
 
 	{ "uc": "ISM", "deliverable": "Case A", "type": "homework", "link": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cA_2020_02_22?csf=1&e=lPlryc", "startDate": "2020/02/17 13:00", "dueDate": "2020/02/22 13:00" },
 	{ "uc": "ISM", "deliverable": "Case A review", "type": "homework", "link": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cA_2020_02_22/reviews?csf=1&e=XqL8Nw", "startDate": "2020/02/23 08:00", "dueDate": "2020/02/24 23:59" },
