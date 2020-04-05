@@ -67,9 +67,6 @@
 			for (i = 0; i < ucs.length; i++) {
 				ucsMap[ucs[i]["uc"]] = ucs[i];
 			}
-			var x = extractData(ucs, json);
-			console.log(x);
-
 			var tabulator = new Tabulator("#dropScheduleHere", {
 				layout: "fitDataFill",
 				data: extractData(ucs, json),
@@ -93,7 +90,13 @@
 			return jsonMap;
 		}).then((jsonMap) => {
 			console.log(jsonMap)
-			var links = extractLinks(jsonMap);
+			var json = [];
+			var dataFileName = genDataFilename();
+			for (i = 0; i < jsonMap.length; i++) {
+				if (jsonMap[i]["file"] == "fenix_links.json") ucs = jsonMap[i]["json"]
+				if (jsonMap[i]["file"] == dataFileName) json = jsonMap[i]["json"]
+			}
+			var links = extractLinks(json);
 			var html = ""
 			for (i = 0; i < links.length; i++) {
 				html += '<p><a href="' + links[i].href + '" target="_blank">' + links[i].description + '</a></p>'
