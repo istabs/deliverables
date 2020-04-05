@@ -26,7 +26,7 @@
 	<div class="container-fluid">
 		<h1>IST/MEIC ABS delivery schedule</h1>
 		<div id="dropScheduleHere"></div>
-		<p><a href="https://fenix.tecnico.ulisboa.pt/student/submit/projects" target="_blank">Link para página de submissão de projetos no Fénix</a></p>
+		<div id="dropLinksHere"></div>
 	</div>
 
 	<script>
@@ -90,7 +90,16 @@
 					{ title: "Timer", field: "timer", minWidth: 280, formatter: "progress", align: "right", },
 				],
 			});
-		}).catch((err) => console.log('Errors!', err));
+			return jsonMap;
+		}).then((jsonMap) => {
+			var links = extractLinks(jsonMap);
+			var html = ""
+			for (i = 0; i < links.length; i++) {
+				html += '<p><a href="' + links[i].href + '" target="_blank">' + links[i].description + '</a></p>'
+			}
+			document.getElementById("dropLinksHere").innerHTML = html;
+		})
+		.catch((err) => console.log('Errors!', err));
 	</script>
 </body>
 

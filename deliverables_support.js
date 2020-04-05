@@ -40,3 +40,15 @@ var extractData = function (ucs, deliverables) {
 	normalizeTimer(_data)
 	return _data
 }
+
+var extractLinks = function (data) {
+	var _data = []
+	for (i = 0; i < data.length; i++) {
+		if (data[i].target !== "links") continue;
+		_data.push({
+			href: data[i].link,
+			text: data[i].description
+		})
+	}
+	return _data
+}
