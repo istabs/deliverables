@@ -95,8 +95,8 @@
 				if (jsonMap[i]["file"] == "fenix_links.json") ucs = jsonMap[i]["json"]
 				if (jsonMap[i]["file"] == dataFileName) json = jsonMap[i]["json"]
 			}
-			console.log(json);
 			var links = extractLinks(json);
+			console.log(links);
 			var html = ""
 			for (i = 0; i < links.length; i++) {
 				html += '<p><a href="' + links[i].href + '" target="_blank">' + links[i].description + '</a></p>'
