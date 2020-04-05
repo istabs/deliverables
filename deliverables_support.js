@@ -18,6 +18,7 @@ var extractData = function (ucs, deliverables) {
 	}
 	var _data = []
 	for (i = 0; i < deliverables.length; i++) {
+		if (deliverables.target != "deliverables") continue;
 		var _dueDate = new Date(deliverables[i].dueDate)
 		var _dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', _dueDate.getFullYear(), _dueDate
 			.getMonthNr(),
