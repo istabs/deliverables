@@ -46,7 +46,7 @@ var extractLinks = function (data) {
 	for (i = 0; i < data.length; i++) {
 		if (data[i].target !== "links") continue;
 		_data.push({
-			href: data[i].link,
+			link: data[i].link,
 			text: data[i].description
 		})
 	}

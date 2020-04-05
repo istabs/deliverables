@@ -99,7 +99,7 @@
 			console.log(links);
 			var html_links = ""
 			for (i = 0; i < links.length; i++) {
-				html_links += '<p><a href="' + links[i].href + '" target="_blank">' + links[i].text + '</a></p>'
+				html_links += '<p><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></p>'
 			}
 			document.getElementById("dropLinksHere").innerHTML = html_links;
 		})
