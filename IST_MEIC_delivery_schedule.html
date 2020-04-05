@@ -97,11 +97,11 @@
 			}
 			var links = extractLinks(json);
 			console.log(links);
-			var html = ""
+			var html_links = ""
 			for (i = 0; i < links.length; i++) {
-				html += '<p><a href="' + links[i].href + '" target="_blank">' + links[i].description + '</a></p>'
+				html_links += '<p><a href="' + links[i].href + '" target="_blank">' + links[i].description + '</a></p>'
 			}
-			document.getElementById("dropLinksHere").innerHTML = html;
+			document.getElementById("dropLinksHere").innerHTML = html_links;
 		})
 		.catch((err) => console.log('Errors!', err));
 	</script>
