@@ -89,13 +89,13 @@
 			});
 			return jsonMap;
 		}).then((jsonMap) => {
-			console.log(jsonMap)
 			var json = [];
 			var dataFileName = genDataFilename();
 			for (i = 0; i < jsonMap.length; i++) {
 				if (jsonMap[i]["file"] == "fenix_links.json") ucs = jsonMap[i]["json"]
 				if (jsonMap[i]["file"] == dataFileName) json = jsonMap[i]["json"]
 			}
+			console.log(json);
 			var links = extractLinks(json);
 			var html = ""
 			for (i = 0; i < links.length; i++) {
