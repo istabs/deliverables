@@ -52,5 +52,5 @@
 	{ "target": "deliverables", "uc": "ISM", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/22 11:30", "end": "14:30", "room": "1 - 11" },
 	{ "target": "deliverables", "uc": "DS", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/17 9:00", "end": "11:00", "room": "N.D." },
 
-	{ "target": "links", "description": "Link para página de submissão de projetos no Fénix", "link": "https://istabs.github.io/deliverables/IST_MEIC_delivery_deliverables.html"}
+	{ "target": "links", "description": "Link para página de submissão de projetos no Fénix", "link": "https://fenix.tecnico.ulisboa.pt/student/submit/projects"}
 ]
