@@ -97,10 +97,11 @@
 			}
 			var links = extractLinks(json);
 			console.log(links);
-			var html_links = ""
+			var html_links = "<h2>Links</h2><ul>"
 			for (i = 0; i < links.length; i++) {
-				html_links += '<p><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></p>'
+				html_links += '<li><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></li>'
 			}
+			html_links += "</ul>"
 			document.getElementById("dropLinksHere").innerHTML = html_links;
 		})
 		.catch((err) => console.log('Errors!', err));
