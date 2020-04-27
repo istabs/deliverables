@@ -113,7 +113,7 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				var date = weekday + " " + month + "/" + day + " " + hours + ":" + mins + " " + weeknr;
+				var date = "w" + weeknr + " " + month + "/" + day + " " + hours + ":" + mins;
 				document.getElementById("dropDateHere").innerHTML = date;
 			}, 1000)
 		})
