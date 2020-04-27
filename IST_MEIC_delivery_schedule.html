@@ -104,16 +104,18 @@
 			html_links += "</ul>"
 			document.getElementById("dropLinksHere").innerHTML = html_links;
 
-			var today = new Date();
-			var year = today.getFullYear();
-			var month = today.getMonthNr();
-			var day = today.getDate();
-			var weeknr = today.getWeekNr();
-			var weekday = today.getWeekDay();
-			var hours = today.getHours();
-			var mins = today.getMinutes();
-			var date = weekday + " " + month + "/" + day + " " + hours + ":" + mins + " " + weeknr;
-			document.getElementById("dropDateHere").innerHTML = date;
+			setInterval(() => {
+				var today = new Date();
+				var year = today.getFullYear();
+				var month = today.getMonthNr();
+				var day = today.getDate();
+				var weeknr = today.getWeekNr();
+				var weekday = today.getWeekDay();
+				var hours = today.getHours();
+				var mins = today.getMinutes();
+				var date = weekday + " " + month + "/" + day + " " + hours + ":" + mins + " " + weeknr;
+				document.getElementById("dropDateHere").innerHTML = date;
+			}, 1000)
 		})
 		.catch((err) => console.log('Errors!', err));
 	</script>
