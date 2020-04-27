@@ -24,7 +24,7 @@
 
 <body>
 	<div class="container-fluid">
-		<h1>IST/MEIC ABS delivery schedule</h1>
+		<h1>IST/MEIC ABS delivery schedule <span id="dropDateHere"></span></h1>
 		<div id="dropScheduleHere"></div>
 		<div id="dropLinksHere"></div>
 	</div>
@@ -103,6 +103,13 @@
 			}
 			html_links += "</ul>"
 			document.getElementById("dropLinksHere").innerHTML = html_links;
+
+			var today = new Date();
+			var year = today.getFullYear();
+			var month = today.getMonth();
+			var day = today.getDate();
+			var date = "[" + year + "/" + month + "/" + day + "]";
+			document.getElementById("dropDatesHere").innerHTML = date;
 		})
 		.catch((err) => console.log('Errors!', err));
 	</script>
