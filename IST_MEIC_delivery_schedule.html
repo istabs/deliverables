@@ -106,9 +106,11 @@
 
 			var today = new Date();
 			var year = today.getFullYear();
-			var month = today.getMonth();
+			var month = today.getMonthNr();
 			var day = today.getDate();
-			var date = "[" + year + "/" + month + "/" + day + "]";
+			var weeknr = today.getWeekNr()
+			var weekday = today.getWeekDay()
+			var date = "[" + weekday + ", " + year + "/" + month + "/" + day + " (w" + weeknr + ")" + "]";
 			document.getElementById("dropDateHere").innerHTML = date;
 		})
 		.catch((err) => console.log('Errors!', err));
