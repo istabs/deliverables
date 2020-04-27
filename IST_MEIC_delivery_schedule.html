@@ -110,7 +110,7 @@
 			var day = today.getDate();
 			var weeknr = today.getWeekNr()
 			var weekday = today.getWeekDay()
-			var date = "[" + weekday + ", " + month + "/" + day + " (w" + weeknr + ")" + "]";
+			var date = "[" + weekday + ", " + month + "/" + day + ", w" + weeknr + "]";
 			document.getElementById("dropDateHere").innerHTML = date;
 		})
 		.catch((err) => console.log('Errors!', err));
