@@ -24,7 +24,7 @@
 
 <body>
 	<div class="container-fluid">
-		<h1>IST/MEIC ABS delivery schedule <span id="dropDateHere"></span></h1>
+		<h1>IST/MEIC ABS delivery schedule / <span id="dropDateHere"></span></h1>
 		<div id="dropScheduleHere"></div>
 		<div id="dropLinksHere"></div>
 	</div>
@@ -108,9 +108,11 @@
 			var year = today.getFullYear();
 			var month = today.getMonthNr();
 			var day = today.getDate();
-			var weeknr = today.getWeekNr()
-			var weekday = today.getWeekDay()
-			var date = "[" + weekday + ", " + month + "/" + day + ", w" + weeknr + "]";
+			var weeknr = today.getWeekNr();
+			var weekday = today.getWeekDay();
+			var hours = today.getHours();
+			var mins = today.getMinutes();
+			var date = weekday + " " + month + "/" + day + " " + hours + ":" + mins + " " + weeknr;
 			document.getElementById("dropDateHere").innerHTML = date;
 		})
 		.catch((err) => console.log('Errors!', err));
