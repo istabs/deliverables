@@ -104,7 +104,7 @@
 			html_links += "</ul>"
 			document.getElementById("dropLinksHere").innerHTML = html_links;
 
-			setInterval(() => {
+			function getCustomNow() {
 				var today = new Date();
 				var year = today.getFullYear();
 				var month = today.getMonthNr();
@@ -113,8 +113,12 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				var date = "w" + weeknr + " " + month + "/" + day + " " + hours + ":" + mins;
-				document.getElementById("dropDateHere").innerHTML = date;
+				return "w" + weeknr + " " + month + "/" + day + " " + hours + ":" + mins;
+			}
+			
+			document.getElementById("dropDateHere").innerHTML = getCustomNow();
+			setInterval(() => {
+				document.getElementById("dropDateHere").innerHTML = getCustomNow();
 			}, 1000)
 		})
 		.catch((err) => console.log('Errors!', err));
