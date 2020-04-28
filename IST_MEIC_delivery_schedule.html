@@ -105,6 +105,16 @@
 			html_links += "</ul>"
 			document.getElementById("dropLinksHere").innerHTML = html_links;
 
+			function put0X(nr) {
+				return "" + (nr < 10 ? "0" : "") + nr;
+			}
+
+			function formPlural(nr, term) {
+				if (nr <= 0) return "";
+				if (nr == 1) return "" + nr + " " + term + " ";
+				return "" + nr + " " + term + "s ";
+			}
+
 			function getCustomNow() {
 				var today = new Date();
 				var year = today.getFullYear();
@@ -114,15 +124,9 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + hours + ":" + mins;
+				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + put0X(hours) + ":" + put0X(mins);
 			}
 			
-			function formPlural(nr, term) {
-				if (nr <= 0) return "";
-				if (nr == 1) return "" + nr + " " + term + " ";
-				return "" + nr + " " + term + "s ";
-			}
-
 			function getNextDue() {
 				var today = new Date();
 				var data = extractData(ucs, json);
