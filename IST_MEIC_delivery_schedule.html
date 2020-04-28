@@ -131,11 +131,9 @@
 					dueDate = new Date(data[i].dueDate.substring(0, 10))
 					if (dueDate > today) break;
 				}
-				console.log(data[0]);
 				var delta = dueDate.getTime() - today.getTime();
-				var deltaDays = delta / (1000 * 3600 * 24);
-				//var deltaHours = (delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600);
-				var deltaHours = 1;
+				var deltaDays = Math.floor(delta / (1000 * 3600 * 24));
+				var deltaHours = Math.floor((delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600));
 				//var deltaMins = (delta - deltaDays * 1000 * 3600 * 24 - deltaHours * 1000 * 3600) / (1000 * 60);
 				var deltaMins = 1;
 				return formPlural(deltaDays, "day") + formPlural(deltaHours, "hr") + formPlural(deltaMins, "min");
