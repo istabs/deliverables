@@ -133,8 +133,10 @@
 				}
 				var delta = dueDate.getTime() - today.getTime();
 				var deltaDays = delta / (1000 * 3600 * 24);
-				var deltaHours = (delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600);
-				var deltaMins = (delta - deltaDays * 1000 * 3600 * 24 - deltaHours * 1000 * 3600) / (1000 * 60);
+				//var deltaHours = (delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600);
+				var deltaHours = 1;
+				//var deltaMins = (delta - deltaDays * 1000 * 3600 * 24 - deltaHours * 1000 * 3600) / (1000 * 60);
+				var deltaMins = 1;
 				return formPlural(deltaDays, "day") + formPlural(deltaHours, "hr") + formPlural(deltaMins, "min");
 			}
 			
