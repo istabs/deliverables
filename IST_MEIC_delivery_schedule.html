@@ -131,6 +131,7 @@
 					dueDate = new Date(data[i].dueDate.substring(0, 10))
 					if (dueDate > today) break;
 				}
+				console.log(dueDate);
 				var delta = dueDate.getTime() - today.getTime();
 				var deltaDays = Math.floor(delta / (1000 * 3600 * 24));
 				var deltaHours = Math.floor((delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600));
