@@ -118,6 +118,10 @@
 			}
 			
 			function getNextDue() {
+				var data = extractData(ucs, json);
+				for (i = 0; i < data.length; i++) {					
+					console.log(data[i]);
+				}
 				var today = new Date();
 				var year = today.getFullYear();
 				var month = today.getMonthNr();
