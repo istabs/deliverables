@@ -24,8 +24,9 @@ var extractData = function (ucs, deliverables) {
 			.getMonthNr(),
 			_dueDate.getDate(), _dueDate.getHours(), _dueDate.getMinutes(), _dueDate.getWeekNr(), _dueDate
 			.getWeekDay())
-		var _deltaDays = new Date().diff(_dueDate)
-		if (_deltaDays >= 0)
+		var _deltaDays = new Date().diff(_dueDate);
+		var isFuture = new Date().isFuture(_dueDate);
+		if (isFuture)
 			_data.push({
 				uc: deliverables[i].uc,
 				uc_link: ucsDict[deliverables[i].uc].link,

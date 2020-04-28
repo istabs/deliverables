@@ -6,6 +6,10 @@ Date.prototype.diff = function (until) {
 	return Math.round(_ms_diff / _day_ms);
 }
 
+Date.prototype.isFuture = function (until) {
+	return until.getTime() - this.getTime() > 0;
+}
+
 Date.prototype.getMonthNr = function () {
 	return this.getMonth() + 1
 }
