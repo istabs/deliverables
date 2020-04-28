@@ -26,7 +26,8 @@ var extractData = function (ucs, deliverables) {
 			.getWeekDay())
 		var _deltaDays = new Date().diff(_dueDate);
 		var isFuture = new Date().isFuture(_dueDate);
-		if (isFuture)
+		if (isFuture) {
+			console.log(_dueDateString);
 			_data.push({
 				uc: deliverables[i].uc,
 				uc_link: ucsDict[deliverables[i].uc].link,
@@ -37,6 +38,7 @@ var extractData = function (ucs, deliverables) {
 				timer: _deltaDays,
 				dueDate: _dueDateString
 			})
+		}
 	}
 	normalizeTimer(_data)
 	return _data
