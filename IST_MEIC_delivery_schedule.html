@@ -127,6 +127,10 @@
 				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + put0X(hours) + ":" + put0X(mins);
 			}
 			
+			const oneMin = 60000;
+			const oneHour = oneMin * 60;
+			const oneDay = oneHour * 24;
+
 			function getNextDue() {
 				var today = new Date();
 				var data = extractData(ucs, json);
@@ -139,11 +143,10 @@
 				var delta = dueDate.getTime() - today.getTime();
 				console.log(dueDate);
 				console.log(today);
-				console.log(delta);
-				console.log(delta / (1000 * 3600 * 24));
-				var deltaDays = Math.floor(delta / (1000 * 3600 * 24));
-				var deltaHours = Math.floor((delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600));
-				var deltaMins = Math.floor((delta - deltaDays * 1000 * 3600 * 24 - deltaHours * 1000 * 3600) / (1000 * 60));
+				var deltaDays = Math.floor(delta / oneDay);
+				var deltaHours = Math.floor((delta - (deltaDays * oneDay)) / oneHour);
+				console.log(deltaHours);
+				var deltaMins = Math.floor((delta - deltaDays * oneDay - deltaHours * oneHour) / oneMin);
 				return formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins);
 			}
 			
