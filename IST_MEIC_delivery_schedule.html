@@ -141,7 +141,7 @@
 				var deltaDays = Math.floor(delta / (1000 * 3600 * 24));
 				var deltaHours = Math.floor((delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600));
 				var deltaMins = Math.floor((delta - deltaDays * 1000 * 3600 * 24 - deltaHours * 1000 * 3600) / (1000 * 60));
-				return formPlural(deltaDays, "day") + put0x(deltaHours) + ":" + put0x(deltaMins);
+				return formPlural(deltaDays, "day") + put0X(deltaHours) + ":" + put0X(deltaMins);
 			}
 			
 			document.getElementById("dropDateHere").innerHTML = getCustomNow();
