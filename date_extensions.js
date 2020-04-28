@@ -7,6 +7,7 @@ Date.prototype.diff = function (until) {
 }
 
 Date.prototype.isFuture = function (until) {
+	console.log(until + ";" + until.getTime() - this.getTime() > 0);
 	return until.getTime() - this.getTime() > 0;
 }
 
