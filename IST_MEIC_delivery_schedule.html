@@ -119,8 +119,8 @@
 			
 			function formPlural(nr, term) {
 				if (nr <= 0) return "";
-				if (nr == 1) return nr + term + " ";
-				return nr + term + "s ";
+				if (nr == 1) return "" + nr + term + " ";
+				return "" + nr + term + "s ";
 			}
 
 			function getNextDue() {
