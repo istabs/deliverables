@@ -147,12 +147,12 @@
 			}
 			
 			var currentDate = getCustomNow();
-			document.getElementById("titleTag").innerHTML = currentDate.substring(currentDate.length - 5, 5);
+			document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - 5, 5);
 			document.getElementById("dropDateHere").innerHTML = currentDate;
 			document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			setInterval(() => {
 				var currentDate = getCustomNow();
-				document.getElementById("titleTag").innerHTML = currentDate.substring(currentDate.length - 5, 5);
+				document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - 5, 5);
 				document.getElementById("dropDateHere").innerHTML = currentDate;
 				document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			}, 1000)
