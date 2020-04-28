@@ -137,6 +137,8 @@
 					if (recDate < dueDate) dueDate = recDate;
 				}
 				var delta = dueDate.getTime() - today.getTime();
+				Console.log(delta);
+				Console.log(delta / (1000 * 3600 * 24));
 				var deltaDays = Math.floor(delta / (1000 * 3600 * 24));
 				var deltaHours = Math.floor((delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600));
 				var deltaMins = Math.floor((delta - deltaDays * 1000 * 3600 * 24 - deltaHours * 1000 * 3600) / (1000 * 60));
