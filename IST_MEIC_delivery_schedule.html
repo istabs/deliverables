@@ -130,10 +130,11 @@
 			function getNextDue() {
 				var today = new Date();
 				var data = extractData(ucs, json);
-				var dueDate = new Date(2000, 1, 1, 0, 0, 0);
+				var dueDate = new Date(2099, 1, 1, 0, 0, 0);
 				for (i = 0; i < data.length; i++) {
-					dueDate = new Date(data[i].dueDate.substring(0, 10))
-					if (dueDate > today) break;
+					var recDate = new Date(data[i].dueDate.substring(0, 10))
+					if (recDate < today) continue;
+					if (recDate < dueDate) dueDate = recDate;
 				}
 				console.log(dueDate);
 				var delta = dueDate.getTime() - today.getTime();
