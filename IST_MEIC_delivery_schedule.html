@@ -146,13 +146,14 @@
 				return "<strong>" + formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins) + "</strong>";
 			}
 			
+			const offset = 25;
 			var currentDate = getCustomNow();
-			document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - 5, 5);
+			document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - offset, 5);
 			document.getElementById("dropDateHere").innerHTML = currentDate;
 			document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			setInterval(() => {
 				var currentDate = getCustomNow();
-				document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - 5, 5);
+				document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - offset, 5);
 				document.getElementById("dropDateHere").innerHTML = currentDate;
 				document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			}, 1000)
