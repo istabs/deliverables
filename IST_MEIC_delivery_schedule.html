@@ -123,7 +123,7 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + put0X(hours) + ":" + put0X(mins);
+				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + "<strong>" + put0X(hours) + ":" + put0X(mins) + "</strong>";
 			}
 			
 			const oneMin = 60000;
@@ -140,13 +140,10 @@
 					if (recDate < dueDate) dueDate = recDate;
 				}
 				var delta = dueDate.getTime() - today.getTime();
-				console.log(dueDate);
-				console.log(today);
 				var deltaDays = Math.floor(delta / oneDay);
 				var deltaHours = Math.floor((delta - (deltaDays * oneDay)) / oneHour);
-				console.log(deltaHours);
 				var deltaMins = Math.floor((delta - deltaDays * oneDay - deltaHours * oneHour) / oneMin);
-				return formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins);
+				return formPlural(deltaDays, "day") + "<strong>" + put0X(deltaHours) + "h" + put0X(deltaMins) + "</strong>";
 			}
 			
 			document.getElementById("dropDateHere").innerHTML = getCustomNow();
