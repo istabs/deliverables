@@ -148,8 +148,6 @@
 			
 			const offset = 17;
 			var currentDate = getCustomNow();
-			console.log(currentDate);
-			console.log(currentDate.length);
 			document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - offset, currentDate.length - offset + 5);
 			document.getElementById("dropDateHere").innerHTML = currentDate;
 			document.getElementById("dropNextDueHere").innerHTML = getNextDue();
