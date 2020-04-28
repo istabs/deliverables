@@ -25,7 +25,7 @@
 <body>
 	<div class="container-fluid">
 		<h1>IST/MEIC ABS delivery schedule</h1>
-		<p><span id="dropDateHere"></span> | <span id="dropNextDueHere"></span></p>
+		<p>Now: <span id="dropDateHere"></span> | Next delivery in: <span id="dropNextDueHere"></span></p>
 		<div id="dropScheduleHere"></div>
 		<div id="dropLinksHere"></div>
 	</div>
@@ -126,8 +126,8 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				return "Next due: week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + hours + ":" + mins;
-				
+				return "To next delivery: " + day + " days " + hours + ":" + mins;
+
 			}
 			
 			document.getElementById("dropDateHere").innerHTML = getCustomNow();
