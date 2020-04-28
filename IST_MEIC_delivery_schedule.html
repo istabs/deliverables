@@ -97,7 +97,6 @@
 				if (jsonMap[i]["file"] == dataFileName) json = jsonMap[i]["json"]
 			}
 			var links = extractLinks(json);
-			console.log(links);
 			var html_links = "<h2>Links</h2><ul>"
 			for (i = 0; i < links.length; i++) {
 				html_links += '<li><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></li>'
@@ -136,7 +135,6 @@
 					if (recDate < today) continue;
 					if (recDate < dueDate) dueDate = recDate;
 				}
-				console.log(dueDate);
 				var delta = dueDate.getTime() - today.getTime();
 				var deltaDays = Math.floor(delta / (1000 * 3600 * 24));
 				var deltaHours = Math.floor((delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600));
