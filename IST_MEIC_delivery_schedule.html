@@ -139,7 +139,7 @@
 				var deltaDays = 1;
 				var deltaHours = 2;
 				var deltaMins = 3;
-				return formPlural(deltaDays, "day") + deltaHours  + ":" + deltaMins;
+				return formPlural(deltaDays, "day") + formPlural(deltaHours, "hr") + formPlural(deltaMins, "min");
 			}
 			
 			document.getElementById("dropDateHere").innerHTML = getCustomNow();
