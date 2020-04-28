@@ -114,7 +114,7 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				return "w" + weeknr + " " + month + "/" + day + " " + hours + ":" + mins;
+				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + hours + ":" + mins;
 			}
 			
 			document.getElementById("dropDateHere").innerHTML = getCustomNow();
