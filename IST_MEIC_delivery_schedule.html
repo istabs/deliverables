@@ -117,6 +117,12 @@
 				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + hours + ":" + mins;
 			}
 			
+			function formPlural(nr, term) {
+				if (nr <= 0) return "";
+				if (nr == 1) return nr + term + " ";
+				return nr + term + "s ";
+			}
+
 			function getNextDue() {
 				var data = extractData(ucs, json);
 				for (i = 0; i < data.length; i++) {					
@@ -130,7 +136,10 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				return "To next delivery: " + day + " days " + hours + ":" + mins;
+				var deltaDays = 1;
+				var deltaHours = 2;
+				var deltaMins = 3;
+				return formPlural(deltaDays, "day", False) + deltaHours  + ":" + deltaMins;
 
 			}
 			
