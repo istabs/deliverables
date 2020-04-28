@@ -124,21 +124,17 @@
 			}
 
 			function getNextDue() {
-				var data = extractData(ucs, json);
-				for (i = 0; i < data.length; i++) {					
-					console.log(data[i]);
-				}
 				var today = new Date();
-				var year = today.getFullYear();
-				var month = today.getMonthNr();
-				var day = today.getDate();
-				var weeknr = today.getWeekNr();
-				var weekday = today.getWeekDay();
-				var hours = today.getHours();
-				var mins = today.getMinutes();
-				var deltaDays = 1;
-				var deltaHours = 2;
-				var deltaMins = 3;
+				var data = extractData(ucs, json);
+				var dueDate = new Date(2000, 1, 1, 0, 0, 0);
+				for (i = 0; i < data.length; i++) {
+					dueDate = new Date(data.dueDate.substring(0, 10))
+					if (dueDate > today) break;
+				}
+				var delta = dueDate.getTime() - today.getTime();
+				var deltaDays = delta / (1000 * 3600 * 24);
+				var deltaHours = (delta - deltaDays * 1000 * 3600 * 24) / (1000 * 3600);
+				var deltaMins = (delta - deltaDays * 1000 * 3600 * 24 - deltaHours * 1000 * 3600) / (1000 * 60);
 				return formPlural(deltaDays, "day") + formPlural(deltaHours, "hr") + formPlural(deltaMins, "min");
 			}
 			
