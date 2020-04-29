@@ -154,18 +154,18 @@
 				return "<strong>" + formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins) + "</strong>";
 			}
 			
-			var formatTime = (hours, minutes) => sprintf('%02u:%02u', hours, minutes);
+			var formatTagTime = (hours, minutes) => sprintf('%02u:%02u', hours, minutes);
+			var formatScrTime = (now) => sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s">%02s:%02s</a></strong>', now.weeknr, now.weekday, now.year, now.month, now.day, "https://istabs.github.io/deliverables/clock/", now.hours, now.mins);
 
-			var now = getCustomNow();
-			document.getElementById("titleTag").innerHTML = "IST " + formatTime(now.hours, now.mins);
-			document.getElementById("dropDateHere").innerHTML = sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s">%02s:%02s</a></strong>', now.weeknr, now.weekday, now.year, now.month, now.day, "https://istabs.github.io/deliverables/clock/", now.hours, now.mins);
-			document.getElementById("dropNextDueHere").innerHTML = getNextDue();
-			setInterval(() => {
+			var timeLoop = () => {
 				var now = getCustomNow();
-				document.getElementById("titleTag").innerHTML = "IST " + formatTime(now.hours, now.mins);
-				document.getElementById("dropDateHere").innerHTML = sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s">%02s:%02s</a></strong>', now.weeknr, now.weekday, now.year, now.month, now.day, "https://istabs.github.io/deliverables/clock/", now.hours, now.mins);
+				document.getElementById("titleTag").innerHTML = "IST " + formatTagTime(now.hours, now.mins);
+				document.getElementById("dropDateHere").innerHTML = formatScrTime(now);
 				document.getElementById("dropNextDueHere").innerHTML = getNextDue();
-			}, 1000)
+			}
+
+			timeLoop();
+			setInterval(() => timeLoop(), 1000);
 		})
 		.catch((err) => console.log('Errors!', err));
 	</script>
