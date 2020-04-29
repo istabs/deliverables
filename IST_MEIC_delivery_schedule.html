@@ -154,15 +154,17 @@
 				return "<strong>" + formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins) + "</strong>";
 			}
 			
-			const offset = 18;
+			var formatTime = (hours, minutes) => sprintf('$02u:$02u', hours, mins);
+
 			var now = getCustomNow();
-			var nowMsg = "week " + now.weeknr + " - " + now.weekday + ", " + now.year + "/" + now.month + "/" + now.day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + put0X(now.hours) + ":" + put0X(now.mins) + "</a></strong>";
-			document.getElementById("titleTag").innerHTML = "IST " + now.hours + ":" + now.mins;
+			//var nowMsg = "week " + now.weeknr + " - " + now.weekday + ", " + now.year + "/" + now.month + "/" + now.day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + formatTime(now.hours, now.mins) + "</a></strong>";
+			var nowMsg = sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s>%02s:%02s</a></strong>"', now.weeknr, now.weekday, now.year, now.month, now.day, "https://istabs.github.io/deliverables/clock/", now.hours, now.mins);
+			document.getElementById("titleTag").innerHTML = "IST " + formatTime(now.hours, now.mins);
 			document.getElementById("dropDateHere").innerHTML = nowMsg;
 			document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			setInterval(() => {
-				var nowMsg = "week " + now.weeknr + " - " + now.weekday + ", " + now.year + "/" + now.month + "/" + now.day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + put0X(now.hours) + ":" + put0X(now.mins) + "</a></strong>";
-				document.getElementById("titleTag").innerHTML = "IST " + now.hours + ":" + now.mins;
+				var nowMsg = "week " + now.weeknr + " - " + now.weekday + ", " + now.year + "/" + now.month + "/" + now.day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + formatTime(now.hours, now.mins) + "</a></strong>";
+				document.getElementById("titleTag").innerHTML = "IST " + formatTime(now.hours, now.mins);
 				document.getElementById("dropDateHere").innerHTML = nowMsg;
 				document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			}, 1000)
