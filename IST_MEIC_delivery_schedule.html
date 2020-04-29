@@ -154,10 +154,9 @@
 				return "<strong>" + formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins) + "</strong>";
 			}
 			
-			var formatTime = (hours, minutes) => sprintf('$02u:$02u', hours, mins);
+			var formatTime = (hours, minutes) => sprintf('$02u:$02u', hours, minutes);
 
 			var now = getCustomNow();
-			console.log(now);
 			//var nowMsg = "week " + now.weeknr + " - " + now.weekday + ", " + now.year + "/" + now.month + "/" + now.day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + formatTime(now.hours, now.mins) + "</a></strong>";
 			var nowMsg = sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s>%02s:%02s</a></strong>"', now.weeknr, now.weekday, now.year, now.month, now.day, "https://istabs.github.io/deliverables/clock/", now.hours, now.mins);
 			document.getElementById("titleTag").innerHTML = "IST " + formatTime(now.hours, now.mins);
