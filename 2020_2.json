@@ -52,5 +52,7 @@
 	{ "target": "deliverables", "uc": "DS", "deliverable": "Exame: Época Especial", "type": "exam", "dueDate": "2020/07/17 9:00", "end": "11:00", "room": "N.D." },
 
 	{ "target": "links", "description": "Link para página de submissão de projetos no Fénix", "link": "https://fenix.tecnico.ulisboa.pt/student/submit/projects"},
-	{ "target": "links", "description": "Link para Toggl", "link": "https://toggl.com/app/timer"}
+	{ "target": "links", "description": "Link para Toggl", "link": "https://toggl.com/app/timer"},
+	{ "target": "links", "description": "Videoconference EA (ID da reunião: 721 015 387)", "link": "https://videoconf-colibri.zoom.us/j/721015387"},
+	{ "target": "links", "description": "Videoconference ISM (ID da reunião: 603 564 8062)", "link": "https://videoconf-colibri.zoom.us/j/6035648062"}
 ]
