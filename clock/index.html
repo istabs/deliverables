@@ -11,27 +11,16 @@
 
 	<!-- IMPORTS -->
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.4.3/css/tabulator.min.css" rel="stylesheet">
-	<link href="https://istabs.github.io/deliverables/deliverables_style.css" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-	<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.2/sprintf.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.4.3/js/tabulator.min.js">
-	</script>
+	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="https://istabs.github.io/deliverables/date_extensions.js"></script>
-	<script type="text/javascript" src="https://istabs.github.io/deliverables/deliverables_support.js"></script>
 </head>
 
 <body>
-	<div class="jumbotron d-flex align-items-center">
-		<div class="container">
-			<p class="text-xl-center"><span id="dropDateHere">__:__</span></p>
-		</div>
+	<div id="clock">
+		<p><span id="dropDateHere">__:__</span></p>
 	</div>
 
-	<script>
+	<script type="text/javascript">
 		function put0X(nr) {
 			return "" + (nr < 10 ? "0" : "") + nr;
 		}
@@ -67,4 +56,5 @@
 		}, 1000);
 	</script>
 </body>
+
 </html>
