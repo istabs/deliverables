@@ -146,7 +146,7 @@
 				return "<strong>" + formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins) + "</strong>";
 			}
 			
-			const offset = 10;
+			const offset = 18;
 			var currentDate = getCustomNow();
 			document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - offset, currentDate.length - offset + 5) + "";
 			document.getElementById("dropDateHere").innerHTML = currentDate;
