@@ -123,7 +123,15 @@
 				var weekday = today.getWeekDay();
 				var hours = today.getHours();
 				var mins = today.getMinutes();
-				return "week " + weeknr + " - " + weekday + ", " + year + "/" + month + "/" + day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + put0X(hours) + ":" + put0X(mins) + "</a></strong>";
+				return {
+					weeknr: weeknr,
+					weekday: weekday,
+					year: year,
+					month: month,
+					day: day,
+					hours: hours,
+					mins: mins
+				}
 			}
 			
 			const oneMin = 60000;
@@ -147,14 +155,15 @@
 			}
 			
 			const offset = 18;
-			var currentDate = getCustomNow();
-			document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - offset, currentDate.length - offset + 5) + "";
-			document.getElementById("dropDateHere").innerHTML = currentDate;
+			var now = getCustomNow();
+			var nowMsg = "week " + now.weeknr + " - " + now.weekday + ", " + now.year + "/" + now.month + "/" + now.day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + put0X(now.hours) + ":" + put0X(now.mins) + "</a></strong>";
+			document.getElementById("titleTag").innerHTML = "IST " + now.hours + ":" + now.mins;
+			document.getElementById("dropDateHere").innerHTML = nowMsg;
 			document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			setInterval(() => {
-				var currentDate = getCustomNow();
-				document.getElementById("titleTag").innerHTML = "IST " + currentDate.substring(currentDate.length - offset, currentDate.length - offset + 5) + "";
-				document.getElementById("dropDateHere").innerHTML = currentDate;
+				var nowMsg = "week " + now.weeknr + " - " + now.weekday + ", " + now.year + "/" + now.month + "/" + now.day + " " + "<strong><a href='https://istabs.github.io/deliverables/clock/'>" + put0X(now.hours) + ":" + put0X(now.mins) + "</a></strong>";
+				document.getElementById("titleTag").innerHTML = "IST " + now.hours + ":" + now.mins;
+				document.getElementById("dropDateHere").innerHTML = nowMsg;
 				document.getElementById("dropNextDueHere").innerHTML = getNextDue();
 			}, 1000)
 		})
