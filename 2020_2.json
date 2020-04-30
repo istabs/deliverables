@@ -44,7 +44,7 @@
 	{ "target": "deliverables", "uc": "ISM", "deliverable": "Case FINAL review", "type": "homework", "startDate": "2020/05/24 08:00", "dueDate": "2020/05/26 23:59" },
 
 	{ "target": "deliverables", "uc": "ISM", "deliverable": "Project: Phase 1 - Assignment 1", "type": "project", "link": "https://drive.google.com/drive/folders/1rgNSe9F_SeerAvdywRK5InZMhJ-m8s0k", "startDate": "2020/03/19 15:30", "dueDate": "2020/04/04 13:00" },
-	{ "target": "deliverables", "uc": "ISM", "deliverable": "Project: Phase 2 - Assignment 2", "type": "project", "link": "https://drive.google.com/drive/folders/1rcaobR2UQeZbGhZHcbrQJmUEnz51J5s3", "startDate": "2020/04/04 15:30", "dueDate": "2020/05/02 13:00" },
+	{ "target": "deliverables", "uc": "ISM", "deliverable": "Project: Phase 2 - Assignment 2", "type": "project", "link": "https://drive.google.com/drive/folders/1rcaobR2UQeZbGhZHcbrQJmUEnz51J5s3", "startDate": "2020/04/04 15:30", "dueDate": "2020/05/02 15:00" },
 	{ "target": "deliverables", "uc": "ISM", "deliverable": "Project: Phase 3 - Assignment 3", "type": "project", "startDate": "2020/05/02 15:30", "dueDate": "2020/05/27 13:00" },
 	{ "target": "deliverables", "uc": "ISM", "deliverable": "Project: WORKSHOP", "type": "project", "startDate": "2020/05/28 15:30", "dueDate": "2020/05/28 18:30" },
 
