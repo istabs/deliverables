@@ -43,17 +43,18 @@
 	<script>
 		// ?data=2020_2.json
 		var urlParameters = new URLSearchParams(window.location.search);
-		if (! urlParameters.has("data")) return false;
-		var dataUrl = urlParameters.get("data");
-		console.log(dataUrl);
-		$.getJSON(dataUrl)
-		.success((data) => {
-			var ucs = [];
-			for (i = 0; i < data.length; i++) {
-				if (data.target[i] == "ucs") ucs.push(data.values);
-			}
-			console.log(ucs);
-		});
+		if (urlParameters.has("data")) {
+			var dataUrl = urlParameters.get("data");
+			console.log(dataUrl);
+			$.getJSON(dataUrl)
+			.success((data) => {
+				var ucs = [];
+				for (i = 0; i < data.length; i++) {
+					if (data.target[i] == "ucs") ucs.push(data.values);
+				}
+				console.log(ucs);
+			});
+		}
 	</script>
 	<script>
 		var files = ["fenix_links.json", genDataFilename()];
