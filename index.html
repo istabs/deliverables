@@ -47,7 +47,7 @@
 		var urlParameters = new URLSearchParams(queryString);
 		var dataUrl = urlParameters.get("data");
 		$.getJSON(dataUrl)
-		.then((data) => {
+		.success((data) => {
 			var ucs = [];
 			for (i = 0; i < data.length; i++) {
 				if (data.target[i] == "ucs") ucs.push(data.values);
