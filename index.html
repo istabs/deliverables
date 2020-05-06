@@ -43,7 +43,7 @@
 	<script>
 		// ?data=2020_2.json
 		var urlParameters = new URLSearchParams(window.location.search);
-		if (! urlParameters.has("data")) return;
+		if (! urlParameters.has("data")) return false;
 		var dataUrl = urlParameters.get("data");
 		console.log(dataUrl);
 		$.getJSON(dataUrl)
