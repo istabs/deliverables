@@ -46,9 +46,7 @@
 		var queryString = window.location.search;
 		var urlParameters = new URLSearchParams(queryString);
 		var dataUrl = urlParameters.get("data");
-		console.log(dataUrl);
-		var data = $.getJSON(dataUrl);
-		console.log(data);
+		var data = $.getJSON(dataUrl).then((data) => console.log(data));
 		
 		Promise.all(files.map(async (file) => {
 			let res = {};
