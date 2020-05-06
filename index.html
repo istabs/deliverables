@@ -46,7 +46,6 @@
 		var queryString = window.location.search;
 		console.log(queryString);
 		var urlParameters = new URLSearchParams(queryString);
-		console.log(urlParameters.get("links"));
 		console.log(urlParameters.get("data"));
 		
 		Promise.all(files.map(async (file) => {
