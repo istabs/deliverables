@@ -41,12 +41,14 @@
 		}
 	</script>
 	<script>
-		// ?links=fenix_links.json&data=2020_2.json
+		// ?data=2020_2.json
 		var files = ["fenix_links.json", genDataFilename()];
 		var queryString = window.location.search;
-		console.log(queryString);
 		var urlParameters = new URLSearchParams(queryString);
-		console.log(urlParameters.get("data"));
+		var dataUrl = urlParameters.get("data");
+		console.log(dataUrl);
+		var data = $.getJSON(dataUrl);
+		console.log(data);
 		
 		Promise.all(files.map(async (file) => {
 			let res = {};
