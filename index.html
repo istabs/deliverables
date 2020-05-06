@@ -45,6 +45,7 @@
 		var urlParameters = new URLSearchParams(window.location.search);
 		if (! urlParameters.has("data")) return;
 		var dataUrl = urlParameters.get("data");
+		console.log(dataUrl);
 		$.getJSON(dataUrl)
 		.success((data) => {
 			var ucs = [];
