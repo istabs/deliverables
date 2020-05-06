@@ -55,5 +55,13 @@
 	{ "target": "links", "description": "Link para Toggl", "link": "https://toggl.com/app/timer"},
 	{ "target": "links", "description": "Videoconference EA (ID da reunião: 721-015-387)", "link": "https://videoconf-colibri.zoom.us/j/721015387"},
 	{ "target": "links", "description": "Videoconference ISM (ID da reunião: 603-564-8062)", "link": "https://videoconf-colibri.zoom.us/j/6035648062"},
-	{ "target": "links", "description": "Videoconference ABS (ID da reunião: 861-829-1787, 048889)", "link": "https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"}
+	{ "target": "links", "description": "Videoconference ABS (ID da reunião: 861-829-1787, 048889)", "link": "https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"},
+
+	{ "target": "ucs", "values": [
+		{ "uc": "DS", "name": "Ciência de Dados", "nameEn": "Data Science", "link": "https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre" },
+		{ "uc": "EA", "name": "Arquitetura Empresarial", "nameEn": "Enterprise Architecture", "link": "https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre" },
+		{ "uc": "ISM", "name": "Gestão de Sistemas de Informação", "nameEn": "Information Systems Management", "link": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre" },
+		{ "uc": "NL", "name": "Língua Natural", "nameEn": "Natural Language", "link": "https://fenix.tecnico.ulisboa.pt/disciplinas/LN13/2019-2020/1-semestre" },
+		{ "uc": "PLID", "name": "Planeamento, Aprendizagem e Decisão Inteligente", "nameEn": "Planning, Learning and Intelligent Decision-Making", "link": "https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre" }
+	]}
 ]
