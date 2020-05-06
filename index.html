@@ -50,7 +50,7 @@
 		.then((data) => {
 			var ucs = [];
 			for (i = 0; i < data.length; i++) {
-				if (data.target == "ucs") ucs.push(data.values);
+				if (data.target[i] == "ucs") ucs.push(data.values);
 			}
 			console.log(ucs);
 		});
