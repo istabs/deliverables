@@ -1,0 +1,12 @@
+[
+	{ "rel": "todo", "payload": { "what": "Inspeção", "when": {"start": "2020/06/07", "due": "2020/08/07"}, "who": "98-IX-67 (Mercedes A160)", "where": "ControlAuto Sacavém", "why": "obrigação" } },
+	{ "rel": "todo", "payload": { "what": "Inspeção", "when": {"start": "2020/05/01", "due": "2020/06/30"}, "who": "71-NC-95 (Mercedes C220 CDI)", "where": "ControlAuto Sacavém", "why": "obrigação" } },
+	{ "rel": "todo", "payload": { "what": "Inspeção", "when": {"start": "2020/05/01", "due": "2020/06/30"}, "who": "83-67-LJ (Mercedes 230 SLK)", "where": "ControlAuto Sacavém", "why": "obrigação" } },
+	{ "rel": "topay", "payload": { "what": "Seguro", "when": {"start": "2020/04/20", "due": "2020/08/16"},  "who": "98-IX-67 (Mercedes A160)", "where": "Ocidental", "why": "renovação" } },
+	{ "rel": "topay", "payload": { "what": "Seguro", "when": {"start": "2019/06/19", "due": "2020/06/19"},  "who": "27-75-NS (BMW R1100RT)", "where": "Tranquilidade", "why": "renovação" } },
+	{ "rel": "topay", "payload": { "what": "Seguro", "when": {"start": "2019/03/02", "due": "2020/03/01"},  "who": "83-67-LJ (Mercedes 230 SLK)", "where": "Fidelidade", "why": "renovação" } },
+	{ "rel": "topay", "payload": { "what": "IUC", "when": {"start": "2019/06/13", "due": "2020/06/30"},  "who": "83-67-LJ (Mercedes 230 SLK)", "where": "Portal das Finanças", "why": "imposto", "howMuch": "146,03€" } },
+	{ "rel": "topay", "payload": { "what": "IUC", "when": {"start": "2019/06/13", "due": "2020/06/30"},  "who": "71-NC-95 (Mercedes C220 CDI)", "where": "Portal das Finanças", "why": "imposto", "howMuch": "258,78€" } },
+	{ "rel": "topay", "payload": { "what": "IUC", "when": {"start": "2019/06/13", "due": "2020/06/30"},  "who": "27-75-NS (BMW R1100RT)", "where": "Portal das Finanças", "why": "imposto", "howMuch": "127,44€" } },
+	{ "rel": "deliver", "payload": { "what": "Declaração Trabalhador-Estudante", "when": {"start": "2019/02/14", "due": "2020/04/30"},  "who": "ABS", "where": "IST", "why": "obtenção estatuto" } }
+]
