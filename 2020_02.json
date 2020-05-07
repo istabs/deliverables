@@ -1,11 +1,11 @@
 [
 	{
-		"target": "title",
+		"rel": "title",
 		"value": "IST/MEIC ABS delivery schedule"
 	}
 
 	,{
-		"target": "deliverables",
+		"rel": "deliverables",
 		"values": [
 			{ "uc": "EA", "deliverable": "Homework Bonus #01", "type": "homework", "link": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2301_2020_03_01?csf=1&web=1&e=k1nymd", "startDate": "2020/02/19 00:01", "dueDate": "2020/03/01 23:59" },
 			{ "uc": "EA", "deliverable": "Homework Bonus #02", "type": "homework", "link": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2302_2020_03_08?csf=1&web=1&e=Fc0T2i", "startDate": "2020/03/03 00:01", "dueDate": "2020/03/08 23:59" },
@@ -62,7 +62,7 @@
 	}
 
 	,{
-		"target": "ucs",
+		"rel": "ucs",
 		"values": [
 			{ "uc": "DS", "name": "Ciência de Dados", "nameEn": "Data Science", "link": "https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre" },
 			{ "uc": "EA", "name": "Arquitetura Empresarial", "nameEn": "Enterprise Architecture", "link": "https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre" },
@@ -73,7 +73,7 @@
 	}
 
 	,{
-		"target": "links",
+		"rel": "links",
 		"values": [
 			{ "description": "Link para página de submissão de projetos no Fénix", "link": "https://fenix.tecnico.ulisboa.pt/student/submit/projects"},
 			{ "description": "Link para Toggl", "link": "https://toggl.com/app/timer"},
