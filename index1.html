@@ -125,6 +125,10 @@
 				}
 
 				var links = extractLinks(_links);
+
+				console.log(_links);
+				console.log(links);
+
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
 					html_links += '<li><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></li>'
