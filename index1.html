@@ -41,8 +41,8 @@
 			var dataUrl = urlParameters.get("data");
 			$.getJSON(dataUrl)
 			.then((data) => {
-				
-				if (data.has("title")) document.getElementById("dropTitleHere").innerHTML = data.title;
+
+				if (data.hasOwnProperty("title")) document.getElementById("dropTitleHere").innerHTML = data.title;
 
 				var deliverables = [], ucs = [], links = [];
 				for (i = 0; i < data.length; i++) {
