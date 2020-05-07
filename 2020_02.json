@@ -75,11 +75,11 @@
 	,{
 		"rel": "links",
 		"values": [
-			{ "description": "Link para página de submissão de projetos no Fénix", "link": "https://fenix.tecnico.ulisboa.pt/student/submit/projects"},
-			{ "description": "Link para Toggl", "link": "https://toggl.com/app/timer"},
-			{ "description": "Videoconference EA (ID da reunião: 721-015-387)", "link": "https://videoconf-colibri.zoom.us/j/721015387"},
-			{ "description": "Videoconference ISM (ID da reunião: 603-564-8062)", "link": "https://videoconf-colibri.zoom.us/j/6035648062"},
-			{ "description": "Videoconference ABS (ID da reunião: 861-829-1787, 048889)", "link": "https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"}
+			{ "description": "Link para página de submissão de projetos no Fénix", "href": "https://fenix.tecnico.ulisboa.pt/student/submit/projects"},
+			{ "description": "Link para Toggl", "href": "https://toggl.com/app/timer"},
+			{ "description": "Videoconference EA (ID da reunião: 721-015-387)", "href": "https://videoconf-colibri.zoom.us/j/721015387"},
+			{ "description": "Videoconference ISM (ID da reunião: 603-564-8062)", "href": "https://videoconf-colibri.zoom.us/j/6035648062"},
+			{ "description": "Videoconference ABS (ID da reunião: 861-829-1787, 048889)", "href": "https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"}
 		]
 	}
 

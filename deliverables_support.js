@@ -44,7 +44,7 @@ var extractData = function (ucs, deliverables) {
 }
 
 var extractLinks = function (data) {
-	var _data = []
+	let _data = []
 	for (i = 0; i < data.length; i++) {
 		if (data[i].target !== "links") continue;
 		_data.push({

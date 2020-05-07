@@ -117,21 +117,17 @@
 			})
 			.then((data) => {
 
-				let deliverables = [], ucs = [], _links = [];
+				let deliverables = [], ucs = [], links = [];
 				for (i = 0; i < data.length; i++) {
-					if (data[i].target == "deliverables") deliverables = data[i].values;
-					if (data[i].target == "ucs") ucs = data[i].values;
-					if (data[i].target == "links") _links= data[i].values;
+					if (data[i].rel == "deliverables") deliverables = data[i].values;
+					if (data[i].rel == "ucs") ucs = data[i].values;
+					if (data[i].rel == "links") links = data[i].values;
 				}
-
-				var links = extractLinks(_links);
-
-				console.log(_links);
-				console.log(links);
 
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
-					html_links += '<li><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></li>'
+					console.log(links[i]);
+					html_links += '<li><a href="' + links[i].href + '" target="_blank">' + links[i].description + '</a></li>'
 				}
 				html_links += "</ul>"
 				document.getElementById("dropLinksHere").innerHTML = html_links;
