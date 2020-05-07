@@ -78,8 +78,6 @@
 			}).then((ucs_data) => {
 				var ucs = ucs_data[0];
 				var data = ucs_data[1];
-				console.log(ucs);
-				console.log(data);
 				var links = extractLinks(data);
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
@@ -124,10 +122,10 @@
 
 				function getNextDue() {
 					var today = new Date();
-					var data = extractData(ucs, data);
+					var _data = extractData(ucs, data);
 					var dueDate = new Date(2099, 1, 1, 0, 0, 0);
-					for (i = 0; i < data.length; i++) {
-						var recDate = new Date(data[i].dueDate.substring(0, 16))
+					for (i = 0; i < _data.length; i++) {
+						var recDate = new Date(_data[i].dueDate.substring(0, 16))
 						if (recDate < today) continue;
 						if (recDate < dueDate) dueDate = recDate;
 					}
