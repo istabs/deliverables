@@ -45,7 +45,7 @@
 				console.log(data);
 
 				for (i = 0; i < data.length; i++) {
-					if (data[i].hasOwnProperty("rel") && data[i].rel["target"] === "title")
+					if (data[i].hasOwnProperty("rel") && data[i].rel === "title")
 						document.getElementById("dropTitleHere").innerHTML = data[i].value;
 				}
 
