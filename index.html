@@ -48,9 +48,11 @@
 			$.getJSON(dataUrl)
 			.then((data) => {
 				var ucs = [];
+				var links = [];
 				var json = [];
 				for (i = 0; i < data.length; i++) {
 					if (data[i].target == "ucs") ucs = data[i].values;
+					if (data[i].target == "links") links.push(data[i]);
 				}
 
 				var tabulator = new Tabulator("#dropScheduleHere", {
@@ -73,15 +75,9 @@
 						{ title: "Timer", field: "timer", minWidth: 280, formatter: "progress", align: "right", },
 					],
 				});
-				return jsonMap;
-			}).then((jsonMap) => {
-				var json = [];
-				var dataFileName = genDataFilename();
-				for (i = 0; i < jsonMap.length; i++) {
-					if (jsonMap[i]["file"] == "fenix_links.json") ucs = jsonMap[i]["json"]
-					if (jsonMap[i]["file"] == dataFileName) json = jsonMap[i]["json"]
-				}
-				var links = extractLinks(json);
+				return links;
+			}).then((links) => {
+				//var links = extractLinks(json);
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
 					html_links += '<li><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></li>'
