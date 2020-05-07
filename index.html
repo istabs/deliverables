@@ -78,6 +78,8 @@
 			}).then((ucs_data) => {
 				var ucs = ucs_data[0];
 				var data = ucs_data[1];
+				console.log(ucs);
+				console.log(data);
 				var links = extractLinks(data);
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
