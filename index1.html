@@ -79,9 +79,9 @@
 						if (isFuture) {
 							tableData.push({
 								uc: deliverables[i].uc,
-								uc_link: "link" in ucsDict[deliverables[i].uc] ? ucsDict[deliverables[i].uc].link : "#",
+								uc_link: "href" in ucsDict[deliverables[i].uc] ? ucsDict[deliverables[i].uc].href : "#",
 								deliverable: deliverables[i].deliverable,
-								link: "link" in deliverables[i] ? deliverables[i].link : "goback.html",
+								link: "href" in deliverables[i] ? deliverables[i].href : "goback.html",
 								type: deliverables[i].type,
 								days: _deltaDays,
 								timer: _deltaDays,
