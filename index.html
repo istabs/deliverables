@@ -50,7 +50,7 @@
 				var ucs = [];
 				var json = [];
 				for (i = 0; i < data.length; i++) {
-					if (data[i].target == "ucs") ucs.push(data[i].values);
+					if (data[i].target == "ucs") ucs = data[i].values;
 				}
 
 				var tabulator = new Tabulator("#dropScheduleHere", {
