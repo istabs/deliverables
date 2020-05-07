@@ -42,8 +42,6 @@
 			$.getJSON(dataUrl)
 			.then((data) => {
 
-				console.log(data);
-
 				for (i = 0; i < data.length; i++) {
 					if (data[i].hasOwnProperty("rel") && data[i].rel === "title")
 						document.getElementById("dropTitleHere").innerHTML = data[i].value;
@@ -56,9 +54,48 @@
 					if (data[i].target == "links") links= data[i].links;
 				}
 
+				var composeTable = function (data) {
+					let ucsDict = [], deliverables = [];
+					for (j = 0; j < data.length; j++) {
+						if (data[j].rel === "ucs") {
+							var ucs = data[j].values;
+							for (i = 0; i < ucs.length; i++) {
+								ucsDict[ucs[i].uc] = ucs[i]
+							}
+						}
+						if (data[j].rel === "deliverables") {
+							deliverables = data[j].values;
+						}
+					}
+					var tableData = []
+					for (i = 0; i < deliverables.length; i++) {
+						var _dueDate = new Date(deliverables[i].dueDate)
+						var _dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', _dueDate.getFullYear(), _dueDate
+						.getMonthNr(),
+						_dueDate.getDate(), _dueDate.getHours(), _dueDate.getMinutes(), _dueDate.getWeekNr(), _dueDate
+						.getWeekDay())
+						var _deltaDays = new Date().diff(_dueDate);
+						var isFuture = new Date().isFuture(_dueDate);
+						if (isFuture) {
+							tableData.push({
+								uc: deliverables[i].uc,
+								uc_link: "link" in ucsDict[deliverables[i].uc] ? ucsDict[deliverables[i].uc].link : "#",
+								deliverable: deliverables[i].deliverable,
+								link: "link" in deliverables[i] ? deliverables[i].link : "goback.html",
+								type: deliverables[i].type,
+								days: _deltaDays,
+								timer: _deltaDays,
+								dueDate: _dueDateString
+							})
+						}
+					}
+					normalizeTimer(tableData)
+					return tableData
+				}
+				
 				var tabulator = new Tabulator("#dropScheduleHere", {
 					layout: "fitDataFill",
-					data: extractData(ucs, data),
+					data: composeTable(data),
 					tooltips: false,
 					movableColumns: true,
 					responsiveLayout: "hide",
