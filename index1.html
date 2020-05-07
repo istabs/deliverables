@@ -23,6 +23,7 @@
 </head>
 
 <body>
+
 	<div class="container-fluid">
 		<div id="dropInvalidFileMsgHere">
 			<h1 id = "dropTitleHere"></h1>
@@ -33,7 +34,7 @@
 	</div>
 
 	<script>
-		// ?data=2020_02.json
+		// ?data=2020s2.json
 		var urlParameters = new URLSearchParams(window.location.search);
 		if (! urlParameters.has("data")) {
 			document.getElementById("dropInvalidFileMsgHere").innerHTML = "Invalid resource format";
@@ -99,7 +100,7 @@
 					tooltips: false,
 					movableColumns: true,
 					responsiveLayout: "hide",
-					height: 560,
+					height: 561,
 					initialSort: [{
 						column: "timer",
 						dir: "asc"
@@ -165,12 +166,11 @@
 				const oneHour = oneMin * 60;
 				const oneDay = oneHour * 24;
 
-				function getNextDue() {
+				function getNextDue(deliverables) {
 					var today = new Date();
-					var _data = extractData(ucs, data);
 					var dueDate = new Date(2099, 1, 1, 0, 0, 0);
-					for (i = 0; i < _data.length; i++) {
-						var recDate = new Date(_data[i].dueDate.substring(0, 16))
+					for (i = 0; i < deliverables.length; i++) {
+						var recDate = new Date(deliverables[i].dueDate.substring(0, 16))
 						if (recDate < today) continue;
 						if (recDate < dueDate) dueDate = recDate;
 					}
@@ -188,7 +188,7 @@
 					var now = getCustomNow();
 					document.getElementById("titleTag").innerHTML = "IST " + formatTagTime(now.hours, now.mins);
 					document.getElementById("dropDateHere").innerHTML = formatScrTime(now);
-					document.getElementById("dropNextDueHere").innerHTML = getNextDue();
+					document.getElementById("dropNextDueHere").innerHTML = getNextDue(deliverables);
 				}
 
 				timeLoop();
