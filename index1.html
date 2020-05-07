@@ -92,7 +92,7 @@
 					normalizeTimer(tableData)
 					return tableData
 				}
-				
+
 				var tabulator = new Tabulator("#dropScheduleHere", {
 					layout: "fitDataFill",
 					data: composeTable(data),
@@ -126,7 +126,6 @@
 
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
-					console.log(links[i]);
 					html_links += '<li><a href="' + links[i].href + '" target="_blank">' + links[i].description + '</a></li>'
 				}
 				html_links += "</ul>"
