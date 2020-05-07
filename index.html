@@ -74,8 +74,10 @@
 						{ title: "Timer", field: "timer", minWidth: 280, formatter: "progress", align: "right", },
 					],
 				});
-				return data;
-			}).then((data) => {
+				return [ucs, data];
+			}).then((ucs_data) => {
+				var ucs = ucs_data[0];
+				var data = ucs_data[1];
 				var links = extractLinks(data);
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
