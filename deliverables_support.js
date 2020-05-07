@@ -16,7 +16,6 @@ var extractData = function (ucs, deliverables) {
 	for (i = 0; i < ucs.length; i++) {
 		ucsDict[ucs[i].uc] = ucs[i]
 	}
-	console.log(ucsDict);
 	var _data = []
 	for (i = 0; i < deliverables.length; i++) {
 		if (deliverables[i].target !== "deliverables") continue;
@@ -28,8 +27,6 @@ var extractData = function (ucs, deliverables) {
 		var _deltaDays = new Date().diff(_dueDate);
 		var isFuture = new Date().isFuture(_dueDate);
 		if (isFuture) {
-			console.log("deliverables[i]");
-			console.log(deliverables[i]);
 			_data.push({
 				uc: deliverables[i].uc,
 				uc_link: "link" in ucsDict[deliverables[i].uc] ? ucsDict[deliverables[i].uc].link : "#",
