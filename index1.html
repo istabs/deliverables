@@ -145,7 +145,7 @@
 				setInterval(() => timeLoop(), 1000);
 			})
 			.catch((err) => {
-				document.innerHTML("dropInvalidFileMsgHere") = "Invalid resource";
+				document.getElementById("dropInvalidFileMsgHere").innerHTML = "Invalid resource";
 				console.log('Errors!', err);
 				}
 			);
