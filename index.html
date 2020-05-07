@@ -49,7 +49,6 @@
 			.then((data) => {
 				var ucs = [];
 				var links = [];
-				var json = [];
 				for (i = 0; i < data.length; i++) {
 					if (data[i].target == "ucs") ucs = data[i].values;
 					if (data[i].target == "links") links.push(data[i]);
