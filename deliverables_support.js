@@ -32,7 +32,7 @@ var extractData = function (ucs, deliverables) {
 			console.log(deliverables[i]);
 			_data.push({
 				uc: deliverables[i].uc,
-				uc_link: ucsDict[deliverables[i].uc].link,
+				uc_link: "link" in ucsDict[deliverables[i].uc] ? ucsDict[deliverables[i].uc].link : "#",
 				deliverable: deliverables[i].deliverable,
 				link: "link" in deliverables[i] ? deliverables[i].link : "goback.html",
 				type: deliverables[i].type,
