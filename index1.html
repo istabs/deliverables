@@ -42,7 +42,10 @@
 			$.getJSON(dataUrl)
 			.then((data) => {
 
-				if (data.hasOwnProperty("title")) document.getElementById("dropTitleHere").innerHTML = data.title;
+				for (i = 0; i < data.length; i++) {
+					if (data[i].hasOwnProperty("rel") && data[i].rel["target"] === "title")
+						document.getElementById("dropTitleHere").innerHTML = data[i].value;
+				}
 
 				var deliverables = [], ucs = [], links = [];
 				for (i = 0; i < data.length; i++) {
