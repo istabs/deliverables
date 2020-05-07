@@ -47,11 +47,12 @@
 			var dataUrl = urlParameters.get("data");
 			$.getJSON(dataUrl)
 			.then((data) => {
-				var ucs = [];
-				var links = [];
+				console.log(data);
+				var deliverables = [], ucs = [], links = [];
 				for (i = 0; i < data.length; i++) {
+					if (data[i].target == "deliverables") deliverables = data[i].values;
 					if (data[i].target == "ucs") ucs = data[i].values;
-					if (data[i].target == "links") links.push(data[i]);
+					if (data[i].target == "links") links= data[i].links;
 				}
 
 				var tabulator = new Tabulator("#dropScheduleHere", {
