@@ -16,6 +16,7 @@ var extractData = function (ucs, deliverables) {
 	for (i = 0; i < ucs.length; i++) {
 		ucsDict[ucs[i].uc] = ucs[i]
 	}
+	console.log(ucsDict);
 	var _data = []
 	for (i = 0; i < deliverables.length; i++) {
 		if (deliverables[i].target !== "deliverables") continue;
