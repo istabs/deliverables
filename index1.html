@@ -24,26 +24,20 @@
 
 <body>
 	<div class="container-fluid">
-		<h1>IST/MEIC ABS delivery schedule</h1>
-		<p>Now: <span id="dropDateHere"></span> | Next delivery in: <span id="dropNextDueHere"></span></p>
-		<div id="dropScheduleHere"></div>
-		<div id="dropLinksHere"></div>
+		<div id="dropInvalidFileMsgHere">
+			<h1 id = "dropTitleHere"></h1>
+			<p>Now: <span id="dropDateHere"></span> | Next delivery in: <span id="dropNextDueHere"></span></p>
+			<div id="dropScheduleHere"></div>
+			<div id="dropLinksHere"></div>
+		</div>
 	</div>
 
 	<script>
-		var genDataFilename = () => {
-			var today = new Date();
-			var year = today.getFullYear();
-			var month = today.getMonth();
-			var semester = month > 1 && month < 6 ? 2 : 1;
-			var lectiveYear = year - (semester == 1 && month > 8 ? 1 : 0);
-			return '' + lectiveYear + '_' + semester + ".json";
-		}
-	</script>
-	<script>
 		// ?data=2020_02.json
 		var urlParameters = new URLSearchParams(window.location.search);
-		if (urlParameters.has("data")) {
+		if (! urlParameters.has("data")) {
+			document.innerHTML("dropInvalidFileMsgHere") = "Invalid resource or resource format";
+		} else {
 			var dataUrl = urlParameters.get("data");
 			$.getJSON(dataUrl)
 			.then((data) => {
