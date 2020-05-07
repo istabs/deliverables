@@ -19,15 +19,16 @@ var extractData = function (ucs, deliverables) {
 	var _data = []
 	for (i = 0; i < deliverables.length; i++) {
 		if (deliverables[i].target !== "deliverables") continue;
-		console.log(deliverables[i]);
 		var _dueDate = new Date(deliverables[i].dueDate)
 		var _dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', _dueDate.getFullYear(), _dueDate
-			.getMonthNr(),
-			_dueDate.getDate(), _dueDate.getHours(), _dueDate.getMinutes(), _dueDate.getWeekNr(), _dueDate
-			.getWeekDay())
+		.getMonthNr(),
+		_dueDate.getDate(), _dueDate.getHours(), _dueDate.getMinutes(), _dueDate.getWeekNr(), _dueDate
+		.getWeekDay())
 		var _deltaDays = new Date().diff(_dueDate);
 		var isFuture = new Date().isFuture(_dueDate);
-		if (isFuture)
+		if (isFuture) {
+			console.log("deliverables[i]");
+			console.log(deliverables[i]);
 			_data.push({
 				uc: deliverables[i].uc,
 				uc_link: ucsDict[deliverables[i].uc].link,
@@ -38,6 +39,7 @@ var extractData = function (ucs, deliverables) {
 				timer: _deltaDays,
 				dueDate: _dueDateString
 			})
+		}
 	}
 	normalizeTimer(_data)
 	return _data
