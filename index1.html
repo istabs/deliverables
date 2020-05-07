@@ -36,12 +36,14 @@
 		// ?data=2020_02.json
 		var urlParameters = new URLSearchParams(window.location.search);
 		if (! urlParameters.has("data")) {
-			document.innerHTML("dropInvalidFileMsgHere") = "Invalid resource format";
+			document.getElementById("dropInvalidFileMsgHere").innerHTML = "Invalid resource format";
 		} else {
 			var dataUrl = urlParameters.get("data");
 			$.getJSON(dataUrl)
 			.then((data) => {
-				console.log(data);
+				
+				if (data.has("title")) document.getElementById("dropTitleHere").innerHTML = data.title;
+
 				var deliverables = [], ucs = [], links = [];
 				for (i = 0; i < data.length; i++) {
 					if (data[i].target == "deliverables") deliverables = data[i].values;
@@ -145,7 +147,7 @@
 				setInterval(() => timeLoop(), 1000);
 			})
 			.catch((err) => {
-				document.getElementById("dropInvalidFileMsgHere").innerHTML = "Invalid resource";
+				document.getElementById("dropInvalidFileMsgHere").innerHTML = "Invalid resource specified; indicate ?/data=<resource>";
 				console.log('Errors!', err);
 				}
 			);
