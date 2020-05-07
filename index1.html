@@ -47,14 +47,14 @@
 						document.getElementById("dropTitleHere").innerHTML = data[i].value;
 				}
 
-				var deliverables = [], ucs = [], links = [];
+				let deliverables = [], ucs = [], links = [];
 				for (i = 0; i < data.length; i++) {
 					if (data[i].target == "deliverables") deliverables = data[i].values;
 					if (data[i].target == "ucs") ucs = data[i].values;
 					if (data[i].target == "links") links= data[i].links;
 				}
 
-				var composeTable = function (data) {
+				let composeTable = function (data) {
 					let ucsDict = [], deliverables = [];
 					for (j = 0; j < data.length; j++) {
 						if (data[j].rel === "ucs") {
@@ -67,15 +67,15 @@
 							deliverables = data[j].values;
 						}
 					}
-					var tableData = []
+					let tableData = []
 					for (i = 0; i < deliverables.length; i++) {
-						var _dueDate = new Date(deliverables[i].dueDate)
-						var _dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', _dueDate.getFullYear(), _dueDate
+						let _dueDate = new Date(deliverables[i].dueDate)
+						let _dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', _dueDate.getFullYear(), _dueDate
 						.getMonthNr(),
 						_dueDate.getDate(), _dueDate.getHours(), _dueDate.getMinutes(), _dueDate.getWeekNr(), _dueDate
 						.getWeekDay())
-						var _deltaDays = new Date().diff(_dueDate);
-						var isFuture = new Date().isFuture(_dueDate);
+						let _deltaDays = new Date().diff(_dueDate);
+						let isFuture = new Date().isFuture(_dueDate);
 						if (isFuture) {
 							tableData.push({
 								uc: deliverables[i].uc,
@@ -113,11 +113,18 @@
 						{ title: "Timer", field: "timer", minWidth: 280, formatter: "progress", align: "right", },
 					],
 				});
-				return [ucs, data];
-			}).then((ucs_data) => {
-				var ucs = ucs_data[0];
-				var data = ucs_data[1];
-				var links = extractLinks(data);
+				return data;
+			})
+			.then((data) => {
+
+				let deliverables = [], ucs = [], _links = [];
+				for (i = 0; i < data.length; i++) {
+					if (data[i].target == "deliverables") deliverables = data[i].values;
+					if (data[i].target == "ucs") ucs = data[i].values;
+					if (data[i].target == "links") _links= data[i].links;
+				}
+
+				var links = extractLinks(_links);
 				var html_links = "<h2>Links</h2><ul>"
 				for (i = 0; i < links.length; i++) {
 					html_links += '<li><a href="' + links[i].link + '" target="_blank">' + links[i].text + '</a></li>'
