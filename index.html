@@ -159,18 +159,21 @@
 				const oneDay = oneHour * 24;
 
 				function getNextDue(deliverables) {
-					var today = new Date();
-					var dueDate = new Date(2099, 1, 1, 0, 0, 0);
+					let today = new Date();
+					let dueDate = new Date(2099, 1, 1, 0, 0, 0);
 					for (i = 0; i < deliverables.length; i++) {
-						var recDate = new Date(deliverables[i].dueDate.substring(0, 16))
+						let recDate = new Date(deliverables[i].dueDate.substring(0, 16))
 						if (recDate < today) continue;
 						if (recDate < dueDate) dueDate = recDate;
 					}
-					var delta = dueDate.getTime() - today.getTime();
-					var deltaDays = Math.floor(delta / oneDay);
-					var deltaHours = Math.floor((delta - (deltaDays * oneDay)) / oneHour);
-					var deltaMins = Math.floor((delta - deltaDays * oneDay - deltaHours * oneHour) / oneMin);
-					return sprintf('%02s day%s %02sh %02sm', deltaDays, deltaDays == 1 ? "" : "s", deltaHours, deltaMins);
+					let delta = dueDate.getTime() - today.getTime();
+					let deltaDays = Math.floor(delta / oneDay);
+					let deltaHours = Math.floor((delta - (deltaDays * oneDay)) / oneHour);
+					let deltaMins = Math.floor((delta - deltaDays * oneDay - deltaHours * oneHour) / oneMin);
+
+					return deltaDays == 0 ?
+						sprintf('%02sh %02sm', deltaHours, deltaMins):
+						sprintf('%02s day%s %02sh %02sm', deltaDays, deltaDays == 1 ? "" : "s", deltaHours, deltaMins);
 				}
 				
 				let deliverables = (() => {
@@ -189,7 +192,7 @@
 				let timeLoop = () => {
 					let now = getCustomNow();
 					let nxtDel = getNextDue(deliverables);
-					document.getElementById("titleTag").innerHTML = sprintf("IST %s / %s", formatTagTime(now.hours, now.mins), nxtDel);
+					document.getElementById("titleTag").innerHTML = sprintf("IST &#128343; %s &#128167; %s", formatTagTime(now.hours, now.mins), nxtDel);
 					document.getElementById("dropDateHere").innerHTML = formatScrTime(now);
 					document.getElementById("dropNextDueHere").innerHTML = sprintf('<strong>%s</strong>', nxtDel);
 				};
