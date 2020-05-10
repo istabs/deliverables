@@ -173,10 +173,13 @@
 					return sprintf('%02s day%s %02sh %02sm', deltaDays, deltaDays == 1 ? "" : "s", deltaHours, deltaMins);
 				}
 				
-				let deliverables = [];
-				for (i = 0; i < data.length; i++) {
-					if (data[i].rel == "deliverables") deliverables = data[i].values;
-				}
+				let deliverables = (() => {
+					let deliverables = [];
+					for (i = 0; i < data.length; i++) {
+						if (data[i].rel == "deliverables") deliverables = data[i].values;
+					}
+					return deliverables;
+				})();
 
 				let formatTagTime = (hours, minutes) => sprintf('%02u:%02u', hours, minutes);
 				let formatScrTime = (now) => sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s">%02s:%02s</a></strong>',
