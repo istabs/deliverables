@@ -20,7 +20,6 @@
 			{ "uc": "EA", "deliverable": "Project: Additional Questions", "type": "project", "href": "https://drive.google.com/open?id=1qBI5B3FfrEz4hMWYFxQsZ3Pi9gWq86CP", "startDate": "2020/03/04 12:00", "dueDate": "2020/03/13 23:59" },
 			{ "uc": "EA", "deliverable": "Project: 1st delivery", "type": "project", "href": "https://drive.google.com/open?id=1q1rtLnS2bkOXEBpvRU0-jYxcPGPLCDrU", "startDate": "2020/03/04 12:00", "dueDate": "2020/04/03 23:59" },
 			{ "uc": "EA", "deliverable": "Project: Final delivery", "type": "project", "startDate": "2020/04/10 12:00", "dueDate": "2020/05/28 23:59" },
-			{ "uc": "EA", "deliverable": "Project: Presentation", "type": "project", "startDate": "2020/05/16 12:00", "dueDate": "2020/05/19 13:00" },
 
 			{ "uc": "EA", "deliverable": "Project: Presentation - parte 1", "type": "exam", "dueDate": "2020/06/01 08:00", "end": "13:00", "room": "" },
 			{ "uc": "EA", "deliverable": "Project: Presentation - parte 2", "type": "exam", "dueDate": "2020/06/02 14:00", "end": "19:00", "room": "" },
