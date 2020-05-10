@@ -118,9 +118,8 @@
 			})
 			.then((data) => {
 
-				let deliverables = [], ucs = [], links = [];
+				let ucs = [], links = [];
 				for (i = 0; i < data.length; i++) {
-					if (data[i].rel == "deliverables") deliverables = data[i].values;
 					if (data[i].rel == "ucs") ucs = data[i].values;
 					if (data[i].rel == "links") links = data[i].values;
 				}
@@ -131,16 +130,9 @@
 				}
 				html_links += "</ul>"
 				document.getElementById("dropLinksHere").innerHTML = html_links;
-
-				function put0X(nr) {
-					return "" + (nr < 10 ? "0" : "") + nr;
-				}
-
-				function formPlural(nr, term) {
-					if (nr <= 0) return "";
-					if (nr == 1) return "" + nr + " " + term + " ";
-					return "" + nr + " " + term + "s ";
-				}
+				return data;
+			})
+			.then((data) => {
 
 				function getCustomNow() {
 					var today = new Date();
@@ -178,18 +170,26 @@
 					var deltaDays = Math.floor(delta / oneDay);
 					var deltaHours = Math.floor((delta - (deltaDays * oneDay)) / oneHour);
 					var deltaMins = Math.floor((delta - deltaDays * oneDay - deltaHours * oneHour) / oneMin);
-					return "<strong>" + formPlural(deltaDays, "day") + put0X(deltaHours) + "h" + put0X(deltaMins) + "</strong>";
+					return sprintf('%02s day%s %02sh %02sm', deltaDays, deltaDays == 1 ? "" : "s", deltaHours, deltaMins);
 				}
 				
-				var formatTagTime = (hours, minutes) => sprintf('%02u:%02u', hours, minutes);
-				var formatScrTime = (now) => sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s">%02s:%02s</a></strong>', now.weeknr, now.weekday, now.year, now.month, now.day, "https://istabs.github.io/deliverables/clock/", now.hours, now.mins);
-
-				var timeLoop = () => {
-					var now = getCustomNow();
-					document.getElementById("titleTag").innerHTML = "IST " + formatTagTime(now.hours, now.mins);
-					document.getElementById("dropDateHere").innerHTML = formatScrTime(now);
-					document.getElementById("dropNextDueHere").innerHTML = getNextDue(deliverables);
+				let deliverables = [];
+				for (i = 0; i < data.length; i++) {
+					if (data[i].rel == "deliverables") deliverables = data[i].values;
 				}
+
+				let formatTagTime = (hours, minutes) => sprintf('%02u:%02u', hours, minutes);
+				let formatScrTime = (now) => sprintf('week %02s - %s, %s/%02s/%02s <strong><a href="%s">%02s:%02s</a></strong>',
+					now.weeknr, now.weekday, now.year, now.month, now.day, "https://istabs.github.io/deliverables/clock/",
+					now.hours, now.mins);
+
+				let timeLoop = () => {
+					let now = getCustomNow();
+					let nxtDel = getNextDue(deliverables);
+					document.getElementById("titleTag").innerHTML = sprintf("IST %s / %s", formatTagTime(now.hours, now.mins), nxtDel);
+					document.getElementById("dropDateHere").innerHTML = formatScrTime(now);
+					document.getElementById("dropNextDueHere").innerHTML = sprintf('<strong>%s</strong>', nxtDel);
+				};
 
 				timeLoop();
 				setInterval(() => timeLoop(), 1000);
