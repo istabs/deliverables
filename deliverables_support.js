@@ -1,4 +1,4 @@
-var normalizeTimer = function (data) {
+function normalizeTimer(data) {
 	var _maxTimer = 0
 	for (i = 0; i < data.length; i++) {
 		if (data[i].timer > _maxTimer) {
@@ -11,7 +11,7 @@ var normalizeTimer = function (data) {
 	return data
 }
 
-var extractData = function (ucs, deliverables) {
+function extractData(ucs, deliverables) {
 	let ucsDict = {};
 	for (i = 0; i < ucs.length; i++) {
 		ucsDict[ucs[i].uc] = ucs[i]
@@ -43,7 +43,7 @@ var extractData = function (ucs, deliverables) {
 	return _data
 }
 
-var extractLinks = function (data) {
+function extractLinks(data) {
 	let _data = []
 	for (i = 0; i < data.length; i++) {
 		if (data[i].target !== "links") continue;
@@ -54,3 +54,36 @@ var extractLinks = function (data) {
 	}
 	return _data
 }
+
+function dataReader(url, map) {
+	return $.getJSON(url).then(jsonData => { // check if data is good then pass it on
+		if (! jsonData.hasOwnProperty("feed") || ! jsonData.feed.hasOwnProperty("entry")) {
+			document.getElementById("dropInvalidFileMsgHere").innerHTML = "Found invalid data format.";
+			return;
+		}
+		map["srcData"] = jsonData;
+		return map;
+	}).then(map => { // check title and set column names
+		with (title = map.srcData.feed.title.$t) {
+			map["title"] = title;
+			for (row of map.db) {
+				if (row.tag !== title) continue;
+				map["cols"] = getColumnsLabels(map.srcData.feed.entry, row.loi);
+				return map;
+		}	}
+	}).then(map => { // match data to columns
+		with (columns = map.cols, json = {}, values = [], currentRow = "", counter = 0, entry = {}) {
+			for (entry of map.srcData.feed.entry) {
+				with (entryCell = entry.gs$cell) {
+					if (entryCell.row == "1") continue;
+					if (currentRow !== entryCell.row) {
+						if (!$.isEmptyObject(json)) values.push(json);
+						json = {};
+						currentRow = entryCell.row;
+					}
+					json[map.cols[entryCell.col]] = entryCell.$t;
+				}
+			}
+			values.push(json);
+			return { rel: map.title, values: values };
+}	});	}
