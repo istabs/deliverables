@@ -47,58 +47,17 @@
 		];
 		const URL_TEMPLATE = "https://spreadsheets.google.com/feeds/cells/%s/%s/public/full?alt=json";
 
-		function buildGsUrl(tag, sheetNr) { return sprintf(URL_TEMPLATE, tag, sheetNr); }
+		const buildGsheetUrl = (tag, sheetNr) => sprintf(URL_TEMPLATE, tag, sheetNr);
 
-		function getLabelsColumns(data, labels) {
+		function getColumnsLabels(data, labels) {
 			let map = [""]; // references starts at 1
-			for (i = 0; i < data.length; i++) {
-				if (data[i].gs$cell.row == "1" && labels.includes(data[i].gs$cell.$t)) {
-					map.push(data[i].gs$cell.$t);
+			for (el of data) {
+				if (el.gs$cell.row == "1" && labels.includes(el.gs$cell.$t)) {
+					map.push(el.gs$cell.$t);
 				}
 			}
 			return map;
 		}
-
-		function dataReader(url, map) {
-			return $.getJSON(url).then((jsonData) => { // check if data is good then pass it on
-				if (! isBypass && (! jsonData.hasOwnProperty("feed") || !jsonData.feed.hasOwnProperty("entry"))) {
-					document.getElementById("dropInvalidFileMsgHere").innerHTML = "Found invalid data format.";
-					return;
-				}
-				map["srcData"] = jsonData;
-				return map;
-			}).then(map => { // check title and set column names
-				if (isBypass) return map.srcData;
-				let title = map.srcData.feed.title.$t;
-				let db = map.db;
-				map["title"] = title;
-				for (i = 0; i < db.length; i++) {
-					if (db[i].tag !== title) continue;
-					let loi = db[i].loi;
-					map["cols"] = getLabelsColumns(map.srcData.feed.entry, loi);
-					return map;
-				}
-			}).then(map => { // match data to columns
-				if (isBypass) return map.srcData;
-				let data = map.srcData.feed.entry,
-					columns = map.cols,
-					json = {},
-					values = [];
-				for (i = 0, currentRow = "", counter = 0, entry = {}; i < data.length; i++) {
-					entry = data[i].gs$cell;
-					if (entry.row == "1") continue;
-					if (currentRow !== entry.row) {
-						if (!$.isEmptyObject(json)) values.push(json);
-						json = {};
-						currentRow = entry.row;
-					}
-					json[map.cols[entry.col]] = entry.$t;
-				}
-				values.push(json);
-				return {
-					rel: map.title,
-					values: values
-		};	});	}
 
 		function composeTable(data) {
 			with (ucsDict = [], deliverables = [], tableData = []) {
@@ -134,27 +93,27 @@
 		let isBypass = urlParameters.has("data");
 		let urlParameter = urlParameters.get(isBypass ? "data" : "gs");
 
-		new Promise((res, rej) => { // read json from Gsheets or json file
-			if (! isBypass) {
-				res(Promise.all([
-					dataReader(buildGsUrl(urlParameter, 1), { db: GSHEETDB }),
-					dataReader(buildGsUrl(urlParameter, 2), { db: GSHEETDB }),
-					dataReader(buildGsUrl(urlParameter, 3), { db: GSHEETDB }),
-					dataReader(buildGsUrl(urlParameter, 4), { db: GSHEETDB })
-				]));
-			} else {
+		new Promise( res => { // read json from Gsheets or json file
+			if (isBypass) {
 				var dataUrl = urlParameter;
 				res($.getJSON(dataUrl));
+			} else {
+				res(Promise.all([
+					dataReader(buildGsheetUrl(urlParameter, 1), { db: GSHEETDB }),
+					dataReader(buildGsheetUrl(urlParameter, 2), { db: GSHEETDB }),
+					dataReader(buildGsheetUrl(urlParameter, 3), { db: GSHEETDB }),
+					dataReader(buildGsheetUrl(urlParameter, 4), { db: GSHEETDB })
+				]));
 			}
-		}).then(res => { // set the titles
-			for (i = 0; i < res.length; i++) {
+		}).then( res => { // set the titles
+			for (let i in res) {
 				if (res[i].rel === "title" && ! res[i].hasOwnProperty("value")) {
 					res[i] = {
 						rel: res[i].rel,
 						value: res[i].values[0].title
 			};	}	}
 			return res;
-		}).then(res => { // filter and align the data
+		}).then( res => { // filter and align the data
 			res.forEach(rec => {
 				if (rec.hasOwnProperty("rel") && rec.rel === "title")
 					document.getElementById("dropTitleHere").innerHTML = rec.value;
@@ -231,7 +190,7 @@
 			let deliverables = (() => {
 				let deliverables = [];
 				for (let rec of res)
-					if (rec.rel == "deliverables")
+					if (rec.rel === "deliverables")
 						deliverables = rec.values;
 				return deliverables;
 			})();
@@ -244,7 +203,7 @@
 				now.hours, now.mins);
 
 			function timeLoop() {
-				let now = getCustomNow();
+				let now = new Date().getCustomNow();
 				let nxtDel = getNextDue(deliverables);
 				document.getElementById("titleTag").innerHTML = sprintf("IST &#128343; %s &#128167; %s",
 					formatTagTime(now.hours, now.mins), nxtDel);
