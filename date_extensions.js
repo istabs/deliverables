@@ -28,6 +28,12 @@ Date.prototype.getWeekDay = function () {
 	return weekdays[this.getDay()];
 }
 
+Date.prototype.getCustomNow = function () {
+	return { weeknr: this.getWeekNr(), weekday: this.getWeekDay(),
+		year: this.getFullYear(), month: this.getMonthNr(), day: this.getDate(),
+		hours: this.getHours(), mins: this.getMinutes() }
+}
+
 Date.getMonthDaysLeft = function (date) {
 	var _year = date.getFullYear()
 	var _month = date.getMonth()
