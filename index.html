@@ -78,7 +78,7 @@
 								uc_link: "href" in ucsDict[deliverable.uc] ? ucsDict[deliverable.uc].href : "#",
 								deliverable: deliverable.deliverable,
 								link: "href" in deliverable ? deliverable.href : "goback.html",
-								type: deliverables[i].type, days: deltaDays, timer: deltaDays, dueDate: dueDateString
+								type: deliverable.type, days: deltaDays, timer: deltaDays, dueDate: dueDateString
 				});	}	}	}
 				normalizeTimer(tableData)
 				return tableData;
