@@ -26,14 +26,12 @@
 
 <body>
 
-	<div id="dropInvalidFileMsgHere">
+	<div id="dropOuterMsgHere">
 		<div class="container-fluid">
-			<div id="dropInvalidFileMsgHere">
-				<h1 id="dropTitleHere"></h1>
-				<p>Now: <span id="dropDateHere"></span> | Next delivery in: <span id="dropNextDueHere"></span></p>
-				<div id="dropScheduleHere"></div>
-				<div id="dropLinksHere"></div>
-			</div>
+			<h1 id="dropTitleHere"></h1>
+			<p>Now: <span id="dropDateHere"></span> | Next delivery in: <span id="dropNextDueHere"></span></p>
+			<div id="dropScheduleHere"></div>
+			<div id="dropLinksHere"></div>
 		</div>
 	</div>
 
@@ -88,15 +86,20 @@
 
 		var urlParameters = new URLSearchParams(window.location.search);
 		if (! urlParameters.has("data") && ! urlParameters.has("gs")) { // gsheets ID
-			document.getElementById("dropInvalidFileMsgHere").innerHTML = "Invalid resource format";
+			document.getElementById("dropOuterMsgHere").innerHTML = "Invalid resource format";
 			exit;
 		}
 
+		let isUsage = urlParameters.has("usage");
 		let isBypass = urlParameters.has("data");
-		let urlParameter = urlParameters.get(isBypass ? "data" : "gs");
 		let isDumpJson = urlParameters.has("gs") && urlParameters.has("dump");
+		let urlParameter = urlParameters.get(isBypass ? "data" : "gs");
 
 		new Promise( res => { // read json from Gsheets or json file
+			if (isUsage) {
+				document.getElementById("dropOuterMsgHere").innerHTML = "usage: ?[gs=GoogleSheetsId[&dump]][data=JSONresourseUrl][usage]";
+				return;
+			}
 			if (isBypass) {
 				var dataUrl = urlParameter;
 				res($.getJSON(dataUrl));
@@ -109,8 +112,9 @@
 				]));
 			}
 		}).then( res => {
+			if (!res) return;
 			if (isDumpJson) {
-				document.getElementById("dropInvalidFileMsgHere").innerHTML = JSON.stringify(res);
+				document.getElementById("dropOuterMsgHere").innerHTML = JSON.stringify(res);
 				return;
 			} else
 				return res;
@@ -227,7 +231,7 @@
 			timeLoop();
 			setInterval(() => timeLoop(), 1000);
 		}).catch((err) => {
-			document.getElementById("dropInvalidFileMsgHere").innerHTML = "Invalid resource specified;\
+			document.getElementById("dropOuterMsgHere").innerHTML = "Invalid resource specified;\
 			pls use ?data=<resource location> or ?gs=<gsheet ID>";
 			console.log('Errors!', err);
 		});
