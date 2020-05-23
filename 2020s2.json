@@ -237,12 +237,9 @@
 		"uc": "ISM",
 		"deliverable": "Case FINAL",
 		"type": "homework",
-		"dueDate": "2020/05/21 15:30"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case FINAL review",
-		"type": "homework",
-		"dueDate": "2020/05/26 23:59"
+		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/MEIC/UCs/2020/ISM/cases/Final_2020_05_21?csf=1&web=1&e=p44WnU",
+		"startDate": "2020/05/21 15:30",
+		"dueDate": "2020/05/21 19:00"
 	}, {
 		"uc": "ISM",
 		"deliverable": "Project: Phase 1 - Assignment 1",
@@ -261,7 +258,16 @@
 		"uc": "ISM",
 		"deliverable": "Project: Phase 3 - Assignment 3",
 		"type": "project",
-		"dueDate": "2020/05/25 13:00"
+		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/MEIC/UCs/2020/ISM/project/phase3?csf=1&web=1&e=GgelVL",
+		"startDate": "2020/05/03 10:00",
+		"dueDate": "2020/05/25 23:59"
+	}, {
+		"uc": "ISM",
+		"deliverable": "Project: Phase 3 - Workshop video",
+		"type": "project",
+		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/MEIC/UCs/2020/ISM/project/phase3?csf=1&web=1&e=GgelVL",
+		"startDate": "2020/05/03 10:00",
+		"dueDate": "2020/05/28 15:30"
 	}, {
 		"uc": "ISM",
 		"deliverable": "Project: WORKSHOP",
