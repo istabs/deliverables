@@ -89,17 +89,18 @@
 			document.getElementById("dropOuterMsgHere").innerHTML = "usage: ?[gs=GoogleSheetsId[&dump]][data=JSONresourseUrl][usage]";
 		}
 
-		let isBypass = urlParameters.has("data");
-		let isDumpJson = urlParameters.has("gs") && urlParameters.has("dump");
-		let isUsage = ! (isBypass || isUsage);
-		let urlParameter = urlParameters.get(isBypass ? "data" : "gs");
+		let isJson = urlParameters.has("data");
+		let isGSheet = urlParameters.has("gs");
+		let isDumpJson = isGSheet && urlParameters.has("dump");
+		let isUsage = ! (isJson || isGSheet);
+		let urlParameter = urlParameters.get(isJson ? "data" : "gs");
 
 		new Promise( res => { // read json from Gsheets or json file
 			if (isUsage) {
 				document.getElementById("dropOuterMsgHere").innerHTML = "usage: ?[gs=GoogleSheetsId[&dump]][data=JSONresourseUrl][usage]";
 				return;
 			}
-			if (isBypass) {
+			if (isJson) {
 				var dataUrl = urlParameter;
 				res($.getJSON(dataUrl));
 			} else {
