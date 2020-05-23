@@ -26,12 +26,14 @@
 
 <body>
 
-	<div class="container-fluid">
-		<div id="dropInvalidFileMsgHere">
-			<h1 id="dropTitleHere"></h1>
-			<p>Now: <span id="dropDateHere"></span> | Next delivery in: <span id="dropNextDueHere"></span></p>
-			<div id="dropScheduleHere"></div>
-			<div id="dropLinksHere"></div>
+	<div id="dropInvalidFileMsgHere">
+		<div class="container-fluid">
+			<div id="dropInvalidFileMsgHere">
+				<h1 id="dropTitleHere"></h1>
+				<p>Now: <span id="dropDateHere"></span> | Next delivery in: <span id="dropNextDueHere"></span></p>
+				<div id="dropScheduleHere"></div>
+				<div id="dropLinksHere"></div>
+			</div>
 		</div>
 	</div>
 
@@ -92,6 +94,7 @@
 
 		let isBypass = urlParameters.has("data");
 		let urlParameter = urlParameters.get(isBypass ? "data" : "gs");
+		let isDumpJson = urlParameters.has("gs") && urlParameters.has("dump");
 
 		new Promise( res => { // read json from Gsheets or json file
 			if (isBypass) {
@@ -105,7 +108,14 @@
 					dataReader(buildGsheetUrl(urlParameter, 4), { db: GSHEETDB })
 				]));
 			}
+		}).then( res => {
+			if (isDumpJson) {
+				document.getElementById("dropInvalidFileMsgHere").innerHTML = JSON.stringify(res);
+				return;
+			} else
+				return res;
 		}).then( res => { // set the titles
+			if (!res) return;
 			for (let i in res) {
 				if (res[i].rel === "title" && ! res[i].hasOwnProperty("value")) {
 					res[i] = {
@@ -114,6 +124,7 @@
 			};	}	}
 			return res;
 		}).then( res => { // filter and align the data
+			if (!res) return;
 			res.forEach(rec => {
 				if (rec.hasOwnProperty("rel") && rec.rel === "title")
 					document.getElementById("dropTitleHere").innerHTML = rec.value;
@@ -146,6 +157,7 @@
 			}
 			return res;
 		}).then( res => {
+			if (!res) return;
 			with (ucs = [], links = [], html_links = "<h2>Links</h2><ul>") {
 				for (let rec of res) {
 					if (rec.rel == "ucs") ucs = rec.values;
@@ -158,6 +170,7 @@
 			}
 			return res;
 		}).then( res => {
+			if (!res) return;
 			function getCustomNow() {
 				let now = new Date();
 				return { weeknr: now.getWeekNr(), weekday: now.getWeekDay(),
