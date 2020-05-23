@@ -86,13 +86,12 @@
 
 		var urlParameters = new URLSearchParams(window.location.search);
 		if (! urlParameters.has("data") && ! urlParameters.has("gs")) { // gsheets ID
-			document.getElementById("dropOuterMsgHere").innerHTML = "Invalid resource format";
-			exit;
+			document.getElementById("dropOuterMsgHere").innerHTML = "usage: ?[gs=GoogleSheetsId[&dump]][data=JSONresourseUrl][usage]";
 		}
 
-		let isUsage = urlParameters.has("usage");
 		let isBypass = urlParameters.has("data");
 		let isDumpJson = urlParameters.has("gs") && urlParameters.has("dump");
+		let isUsage = ! (isBypass || isUsage);
 		let urlParameter = urlParameters.get(isBypass ? "data" : "gs");
 
 		new Promise( res => { // read json from Gsheets or json file
