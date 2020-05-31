@@ -86,21 +86,27 @@
 		"uc": "EA",
 		"deliverable": "Project: Final delivery",
 		"type": "project",
+		"startDate": "2020/04/04 8:00",
 		"dueDate": "2020/05/28 23:59"
 	}, {
 		"uc": "EA",
-		"deliverable": "Project: Presentation - parte 1",
+		"deliverable": "Project: Oral - parte 1 (924 5789 5542 / 078590)",
 		"type": "exam",
-		"dueDate": "2020/06/01 8:00"
+		"href": "https://videoconf-colibri.zoom.us/j/92457895542?pwd=S3hBazNnbm5XVlh3RmVMS0J6S3lZdz09\r",
+		"startDate": "2020/06/01 10:30",
+		"dueDate": "2020/06/01 10:30"
 	}, {
 		"uc": "EA",
-		"deliverable": "Project: Presentation - parte 2",
+		"deliverable": "Project: Oral - parte 2 (924 5789 5542 / 078590)",
 		"type": "exam",
-		"dueDate": "2020/06/02 14:00"
+		"href": "https://videoconf-colibri.zoom.us/meeting/tJUoduGhrzgqHdNfDte1UV19-B9VQNfOchfY/ics?icsToken=98tyKuCpqzoiE9WWsB6ARowcGYj4WfPzmHZfgqdz",
+		"startDate": "2020/06/02 16:30",
+		"dueDate": "2020/06/02 16:30"
 	}, {
 		"uc": "EA",
 		"deliverable": "Teste: Repescagem",
 		"type": "exam",
+		"startDate": "2020/07/03 11:30",
 		"dueDate": "2020/07/03 11:30"
 	}, {
 		"uc": "EA",
@@ -311,10 +317,6 @@
 		"name": "Planeamento, Aprendizagem e Decisão Inteligente",
 		"nameEn": "Planning, Learning and Intelligent Decision-Making",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre"
-	}, {
-		"uc": "Penal",
-		"name": "Penal",
-		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre"
 	}]
 }, {
 	"rel": "links",
@@ -336,5 +338,11 @@
 	}, {
 		"description": "Link para fonte de dados",
 		"href": "https://docs.google.com/spreadsheets/d/1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM/edit#gid=0"
+	}, {
+		"description": "EA Oral, parte 1 (924 5789 5542 / 078590)",
+		"href": "https://videoconf-colibri.zoom.us/j/92457895542?pwd=S3hBazNnbm5XVlh3RmVMS0J6S3lZdz09\r"
+	}, {
+		"description": "EA Oral, parte 2 (924 5789 5542 / 078590)",
+		"href": "https://videoconf-colibri.zoom.us/meeting/tJUoduGhrzgqHdNfDte1UV19-B9VQNfOchfY/ics?icsToken=98tyKuCpqzoiE9WWsB6ARowcGYj4WfPzmHZfgqdz"
 	}]
 }]
