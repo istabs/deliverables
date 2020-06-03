@@ -99,7 +99,7 @@
 		"uc": "EA",
 		"deliverable": "Project: Oral - parte 2 (924 5789 5542 / 078590)",
 		"type": "exam",
-		"href": "https://videoconf-colibri.zoom.us/meeting/tJUoduGhrzgqHdNfDte1UV19-B9VQNfOchfY/ics?icsToken=98tyKuCpqzoiE9WWsB6ARowcGYj4WfPzmHZfgqdz",
+		"href": "https://videoconf-colibri.zoom.us/j/92457895542?pwd=S3hBazNnbm5XVlh3RmVMS0J6S3lZdz09\r",
 		"startDate": "2020/06/02 16:30",
 		"dueDate": "2020/06/02 16:30"
 	}, {
@@ -330,10 +330,13 @@
 		"description": "Videoconference ABS (ID da reunião: 861-829-1787)",
 		"href": "https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"
 	}, {
+		"description": "EA Oral, parte 2 (924 5789 5542 / 078590)",
+		"href": "https://videoconf-colibri.zoom.us/meeting/tJUoduGhrzgqHdNfDte1UV19-B9VQNfOchfY/ics?icsToken=98tyKuCpqzoiE9WWsB6ARowcGYj4WfPzmHZfgqdz"
+	}, {
 		"description": "Link para fonte de dados",
 		"href": "https://docs.google.com/spreadsheets/d/1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM/edit#gid=0"
 	}, {
-		"description": "EA Oral, parte 2 (924 5789 5542 / 078590)",
-		"href": "https://videoconf-colibri.zoom.us/meeting/tJUoduGhrzgqHdNfDte1UV19-B9VQNfOchfY/ics?icsToken=98tyKuCpqzoiE9WWsB6ARowcGYj4WfPzmHZfgqdz"
+		"description": "teste",
+		"href": "#"
 	}]
 }]
