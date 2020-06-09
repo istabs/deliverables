@@ -6,317 +6,111 @@
 }, {
 	"rel": "deliverables",
 	"values": [{
-		"uc": "EA",
-		"deliverable": "Homework Bonus #01",
-		"type": "📂homework",
+		"uc": "---",
+		"deliverable": "pedido de estatuto trabalhador-estudante",
+		"type": "🔥 deadline",
+		"dueDate": "2020/10/14 17:00"
+	}, {
+		"uc": "BPM",
+		"deliverable": "matrícula",
+		"type": "🔥 deadline",
 		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2301_2020_03_01?csf=1&web=1&e=k1nymd",
-		"startDate": "2020/02/19 0:01",
-		"dueDate": "2020/03/01 23:59"
+		"dueDate": "2020/07/14 17:00"
 	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #02",
-		"type": "📂homework",
+		"uc": "ISPM",
+		"deliverable": "matrícula",
+		"type": "🔥 deadline",
 		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2302_2020_03_08?csf=1&web=1&e=Fc0T2i",
-		"startDate": "2020/03/03 0:01",
-		"dueDate": "2020/03/08 23:59"
+		"dueDate": "2020/07/14 17:00"
 	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #03",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2303_2020_03_15?csf=1&web=1&e=MuFhxl",
-		"startDate": "2020/03/11 0:01",
-		"dueDate": "2020/03/15 23:59"
+		"uc": "IS1",
+		"deliverable": "matrícula",
+		"type": "🔥 deadline",
+		"dueDate": "2020/07/14 17:00"
 	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #04",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2304_2020_03_22?csf=1&web=1&e=keuPaD",
-		"startDate": "2020/03/17 15:00",
-		"dueDate": "2020/03/22 23:59"
+		"uc": "BPM",
+		"deliverable": "arranque",
+		"type": "🚀 kickoff",
+		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2301_2020_03_01?csf=1&web=1&e=k1nymd",
+		"dueDate": "2020/09/14 17:00"
 	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #05",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2305_2020_03_29?csf=1&web=1&e=ZrtRVy",
-		"startDate": "2020/03/24 14:00",
-		"dueDate": "2020/03/29 23:59"
+		"uc": "ISPM",
+		"deliverable": "arranque",
+		"type": "🚀 kickoff",
+		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2302_2020_03_08?csf=1&web=1&e=Fc0T2i",
+		"dueDate": "2020/09/14 17:00"
 	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #06",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2306_2020_04_12?csf=1&web=1&e=5aMeui",
-		"startDate": "2020/04/03 12:00",
-		"dueDate": "2020/04/12 23:59"
-	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #07",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2307_2020_04_19?csf=1&web=1&e=R0EQBl",
-		"startDate": "2020/04/18 0:01",
-		"dueDate": "2020/04/21 12:00"
-	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #08",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2308_2020_04_26?csf=1&web=1&e=DiQ0DS",
-		"startDate": "2020/04/23 20:00",
-		"dueDate": "2020/04/28 12:00"
-	}, {
-		"uc": "EA",
-		"deliverable": "Homework Bonus #09",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2309_2020_05_05?csf=1&web=1&e=qlONxk",
-		"startDate": "2020/04/28 14:00",
-		"dueDate": "2020/05/05 12:00"
-	}, {
-		"uc": "EA",
-		"deliverable": "Project: Additional Questions",
-		"type": "📐project",
-		"href": "https://drive.google.com/open?id=1qBI5B3FfrEz4hMWYFxQsZ3Pi9gWq86CP",
-		"startDate": "2020/03/04 12:00",
-		"dueDate": "2020/03/13 23:59"
-	}, {
-		"uc": "EA",
-		"deliverable": "Project: 1st delivery",
-		"type": "📐project",
-		"href": "https://drive.google.com/open?id=1q1rtLnS2bkOXEBpvRU0-jYxcPGPLCDrU",
-		"startDate": "2020/03/04 12:00",
-		"dueDate": "2020/04/03 23:59"
-	}, {
-		"uc": "EA",
-		"deliverable": "Project: Final delivery",
-		"type": "📐project",
-		"startDate": "2020/04/04 8:00",
-		"dueDate": "2020/05/28 23:59"
-	}, {
-		"uc": "EA",
-		"deliverable": "Project: Oral - parte 1 (924 5789 5542 / 078590)",
-		"type": "📝exam",
-		"href": "https://videoconf-colibri.zoom.us/j/92457895542?pwd=S3hBazNnbm5XVlh3RmVMS0J6S3lZdz09\r",
-		"startDate": "2020/06/01 10:30",
-		"dueDate": "2020/06/01 10:30"
-	}, {
-		"uc": "EA",
-		"deliverable": "Project: Oral - parte 2 (924 5789 5542 / 078590)",
-		"type": "📝exam",
-		"href": "https://videoconf-colibri.zoom.us/j/92457895542?pwd=S3hBazNnbm5XVlh3RmVMS0J6S3lZdz09\r",
-		"startDate": "2020/06/02 16:30",
-		"dueDate": "2020/06/02 16:30"
-	}, {
-		"uc": "EA",
-		"deliverable": "Teste: Repescagem",
-		"type": "📝exam",
-		"startDate": "2020/07/03 11:30",
-		"dueDate": "2020/07/03 11:30"
-	}, {
-		"uc": "EA",
-		"deliverable": "Exame: Época Especial",
-		"type": "📝exam",
-		"dueDate": "2020/07/23 11:30"
+		"uc": "IS1",
+		"deliverable": "arranque",
+		"type": "🚀 kickoff",
+		"dueDate": "2020/09/14 17:00"
 	}, {
 		"uc": "ISM",
-		"deliverable": "Case A",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cA_2020_02_22?csf=1&e=lPlryc",
-		"startDate": "2020/02/17 13:00",
-		"dueDate": "2020/02/22 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case A review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cA_2020_02_22/reviews?csf=1&e=XqL8Nw",
-		"startDate": "2020/02/23 8:00",
-		"dueDate": "2020/02/24 23:59"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case B",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cB_2020_02_29?csf=1&e=r40xu7",
-		"startDate": "2020/02/24 13:00",
-		"dueDate": "2020/02/29 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case B review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cB_2020_02_29/reviews?csf=1&e=E8zfxf",
-		"startDate": "2020/03/01 8:00",
-		"dueDate": "2020/03/02 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case C",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cC_2020_03_07?csf=1&e=ZvRJHt",
-		"startDate": "2020/03/02 13:00",
-		"dueDate": "2020/03/07 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case C review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cC_2020_03_07/review?csf=1&e=6l2hA0",
-		"startDate": "2020/03/08 8:00",
-		"dueDate": "2020/03/09 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case D",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cD_2020_03_14?csf=1&e=wmsbvV",
-		"startDate": "2020/03/09 13:00",
-		"dueDate": "2020/03/14 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case D review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cD_2020_03_14/review?csf=1&e=7I87ao",
-		"startDate": "2020/03/15 8:00",
-		"dueDate": "2020/03/16 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case E",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cE_2020_03_21?csf=1&e=UMF86p",
-		"startDate": "2020/03/16 13:00",
-		"dueDate": "2020/03/21 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case E review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cE_2020_03_21/review?csf=1&e=LfrBKr",
-		"startDate": "2020/03/22 8:00",
-		"dueDate": "2020/03/24 23:59"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case F",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cF_2020_03_28?csf=1&e=aEcd5J",
-		"startDate": "2020/03/23 13:00",
-		"dueDate": "2020/03/28 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case F review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cF_2020_03_28/review?csf=1&e=swPrwK",
-		"startDate": "2020/03/29 8:00",
-		"dueDate": "2020/03/31 23:59"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case G",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cG_2020_04_18?csf=1&web=1&e=Vd46Tk",
-		"startDate": "2020/04/13 13:00",
-		"dueDate": "2020/04/18 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case G review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cG_2020_04_18/review?csf=1&web=1&e=jrxt3H",
-		"startDate": "2020/04/19 8:00",
-		"dueDate": "2020/04/22 23:59"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case H",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cH_2020_04_25?csf=1&web=1&e=l9iJHN",
-		"startDate": "2020/04/20 21:03",
-		"dueDate": "2020/04/26 6:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case H review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cH_2020_04_25/review?csf=1&web=1&e=enNzMG",
-		"startDate": "2020/04/26 11:31",
-		"dueDate": "2020/04/29 23:59"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case I",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cI_2020_05_09?csf=1&web=1&e=vHGPx3",
-		"startDate": "2020/04/20 21:03",
-		"dueDate": "2020/05/10 7:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case I review",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/ISM/cases/cI_2020_05_09/review?csf=1&web=1&e=3TfYcn",
-		"startDate": "2020/05/10 8:00",
-		"dueDate": "2020/05/12 23:59"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Case FINAL",
-		"type": "📂homework",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/MEIC/UCs/2020/ISM/cases/Final_2020_05_21?csf=1&web=1&e=p44WnU",
-		"startDate": "2020/05/21 15:30",
-		"dueDate": "2020/05/21 19:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Project: Phase 1 - Assignment 1",
-		"type": "📐project",
-		"href": "https://drive.google.com/drive/folders/1rgNSe9F_SeerAvdywRK5InZMhJ-m8s0k",
-		"startDate": "2020/03/19 15:30",
-		"dueDate": "2020/04/04 13:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Project: Phase 2 - Assignment 2",
-		"type": "📐project",
-		"href": "https://drive.google.com/drive/folders/1rcaobR2UQeZbGhZHcbrQJmUEnz51J5s3",
-		"startDate": "2020/04/04 15:30",
-		"dueDate": "2020/05/03 10:00"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Project: Phase 3 - Assignment 3",
-		"type": "📐project",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/MEIC/UCs/2020/ISM/project/phase3?csf=1&web=1&e=GgelVL",
-		"startDate": "2020/05/03 10:00",
-		"dueDate": "2020/05/25 23:59"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Project: Phase 3 - Workshop video",
-		"type": "📐project",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/MEIC/UCs/2020/ISM/project/phase3?csf=1&web=1&e=GgelVL",
-		"startDate": "2020/05/03 10:00",
-		"dueDate": "2020/05/28 15:30"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Project: WORKSHOP",
-		"type": "📐project",
-		"dueDate": "2020/05/28 18:30"
-	}, {
-		"uc": "ISM",
-		"deliverable": "Exame: Época Especial",
-		"type": "📝exam",
-		"dueDate": "2020/07/22 11:30"
+		"deliverable": "publicação de notas",
+		"type": "🥇 grades",
+		"dueDate": "2020/06/12 20:00"
 	}, {
 		"uc": "DS",
 		"deliverable": "Exame: Época Especial",
-		"type": "📝exam",
+		"type": "✍ exam",
 		"dueDate": "2020/07/23 11:30"
 	}]
 }, {
 	"rel": "ucs",
 	"values": [{
+		"uc": "---",
+		"name": "---",
+		"nameEn": "---",
+		"href": "#",
+		"undefined": "---"
+	}, {
+		"uc": "BPM",
+		"name": "Engenharia e Tecnologia de Processos de Negócio",
+		"nameEn": "Business Process Management",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2020-2021/1-semestre",
+		"undefined": "2020-2021_s1"
+	}, {
 		"uc": "DS",
 		"name": "Ciência de Dados",
 		"nameEn": "Data Science",
-		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre",
+		"undefined": "2019-2020_s1"
 	}, {
 		"uc": "EA",
 		"name": "Arquitetura Empresarial",
 		"nameEn": "Enterprise Architecture",
-		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre",
+		"undefined": "2019-2020_s2"
+	}, {
+		"uc": "IS1",
+		"name": "Portfolio Pessoal 1",
+		"nameEn": "Independent Studies 1",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2020-2021/1-semestre",
+		"undefined": "2020-2021_s1"
 	}, {
 		"uc": "ISM",
 		"name": "Gestão de Sistemas de Informação",
 		"nameEn": "Information Systems Management",
-		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre",
+		"undefined": "2019-2020_s2"
+	}, {
+		"uc": "ISPM",
+		"name": "Gestão de Projectos Informáticos",
+		"nameEn": "Information Systems Project Management",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/GPI7/2020-2021/1-semestre",
+		"undefined": "2020-2021_s1"
 	}, {
 		"uc": "NL",
 		"name": "Língua Natural",
 		"nameEn": "Natural Language",
-		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/LN13/2019-2020/1-semestre"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/LN13/2019-2020/1-semestre",
+		"undefined": "2019-2020_s1"
 	}, {
 		"uc": "PLID",
 		"name": "Planeamento, Aprendizagem e Decisão Inteligente",
 		"nameEn": "Planning, Learning and Intelligent Decision-Making",
-		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre",
+		"undefined": "2019-2020_s1"
 	}]
 }, {
 	"rel": "links",
@@ -329,9 +123,6 @@
 	}, {
 		"description": "Videoconference ABS (ID da reunião: 861-829-1787)",
 		"href": "https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"
-	}, {
-		"description": "EA Oral, parte 2 (924 5789 5542 / 078590)",
-		"href": "https://videoconf-colibri.zoom.us/meeting/tJUoduGhrzgqHdNfDte1UV19-B9VQNfOchfY/ics?icsToken=98tyKuCpqzoiE9WWsB6ARowcGYj4WfPzmHZfgqdz"
 	}, {
 		"description": "Link para fonte de dados",
 		"href": "https://docs.google.com/spreadsheets/d/1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM/edit#gid=0"
