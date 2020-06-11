@@ -113,6 +113,118 @@
 		"type": "✍ exam",
 		"dueDate": "2020/07/17 9:00",
 		"undefined": "2020/07/17 11:00"
+	}, {
+		"uc": "DS",
+		"deliverable": "Data Exploration + Data Visualization",
+		"type": "📂 homework",
+		"startDate": "2020/06/12",
+		"dueDate": "2020/06/13",
+		"undefined": "2020/06/13"
+	}, {
+		"uc": "DS",
+		"deliverable": "Classification",
+		"type": "📂 homework",
+		"startDate": "2020/06/14",
+		"dueDate": "2020/06/14",
+		"undefined": "2020/06/14"
+	}, {
+		"uc": "DS",
+		"deliverable": "Bayesian learning",
+		"type": "📂 homework",
+		"startDate": "2020/06/15",
+		"dueDate": "2020/06/15",
+		"undefined": "2020/06/15"
+	}, {
+		"uc": "DS",
+		"deliverable": "Data Balancing and Evaluation",
+		"type": "📂 homework",
+		"startDate": "2020/06/16",
+		"dueDate": "2020/06/17",
+		"undefined": "2020/06/17"
+	}, {
+		"uc": "DS",
+		"deliverable": "Decision tree learning + Overfitting",
+		"type": "📂 homework",
+		"startDate": "2020/06/18",
+		"dueDate": "2020/06/20",
+		"undefined": "2020/06/20"
+	}, {
+		"uc": "DS",
+		"deliverable": "Ensemble classification",
+		"type": "📂 homework",
+		"startDate": "2020/06/21",
+		"dueDate": "2020/06/21",
+		"undefined": "2020/06/21"
+	}, {
+		"uc": "DS",
+		"deliverable": "Connectionist and evolutionary learning + Pattern mining",
+		"type": "📂 homework",
+		"startDate": "2020/06/22",
+		"dueDate": "2020/06/25",
+		"undefined": "2020/06/25"
+	}, {
+		"uc": "DS",
+		"deliverable": "Sequential pattern mining",
+		"type": "📂 homework",
+		"startDate": "2020/06/26",
+		"dueDate": "2020/06/26",
+		"undefined": "2020/06/26"
+	}, {
+		"uc": "DS",
+		"deliverable": "Clustering + High-dimensional data analysis",
+		"type": "📂 homework",
+		"startDate": "2020/06/27",
+		"dueDate": "2020/06/29",
+		"undefined": "2020/06/29"
+	}, {
+		"uc": "DS",
+		"deliverable": "Feature selection and extraction",
+		"type": "📂 homework",
+		"startDate": "2020/06/30",
+		"dueDate": "2020/06/30",
+		"undefined": "2020/06/30"
+	}, {
+		"uc": "DS",
+		"deliverable": "Biclustering",
+		"type": "📂 homework",
+		"startDate": "2020/07/01",
+		"dueDate": "2020/07/02",
+		"undefined": "2020/07/02"
+	}, {
+		"uc": "DS",
+		"deliverable": "Regression",
+		"type": "📂 homework",
+		"startDate": "2020/07/03",
+		"dueDate": "2020/07/04",
+		"undefined": "2020/07/04"
+	}, {
+		"uc": "DS",
+		"deliverable": "Anomaly detection + Network data analysis + Social and web data analysis",
+		"type": "📂 homework",
+		"startDate": "2020/07/05",
+		"dueDate": "2020/07/07",
+		"undefined": "2020/07/07"
+	}, {
+		"uc": "DS",
+		"deliverable": "Time series representations + Temporal data mining",
+		"type": "📂 homework",
+		"startDate": "2020/07/08",
+		"dueDate": "2020/07/10",
+		"undefined": "2020/07/10"
+	}, {
+		"uc": "DS",
+		"deliverable": "Time series forecasting",
+		"type": "📂 homework",
+		"startDate": "2020/07/11",
+		"dueDate": "2020/07/13",
+		"undefined": "2020/07/13"
+	}, {
+		"uc": "DS",
+		"deliverable": "Big data + Privacy and ethical concerns",
+		"type": "📂 homework",
+		"startDate": "2020/07/14",
+		"dueDate": "2020/07/15",
+		"undefined": "2020/07/15"
 	}]
 }, {
 	"rel": "ucs",
