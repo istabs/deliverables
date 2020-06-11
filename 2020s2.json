@@ -6,49 +6,75 @@
 }, {
 	"rel": "deliverables",
 	"values": [{
+		"uc": "BPM",
+		"deliverable": "matrícula",
+		"type": "🔥 deadline",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
+		"startDate": "2020/09/02 12:00",
+		"dueDate": "2020/09/07 12:00"
+	}, {
+		"uc": "ISPM",
+		"deliverable": "matrícula",
+		"type": "🔥 deadline",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
+		"startDate": "2020/09/02 12:00",
+		"dueDate": "2020/09/07 12:00"
+	}, {
+		"uc": "IS1",
+		"deliverable": "matrícula",
+		"type": "🔥 deadline",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
+		"startDate": "2020/09/02 12:00",
+		"dueDate": "2020/09/07 12:00"
+	}, {
+		"uc": "---",
+		"deliverable": "início ano escolar 2020-2021",
+		"type": "🚀 kickoff",
+		"href": "https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf",
+		"dueDate": "2020/09/07 8:00"
+	}, {
+		"uc": "---",
+		"deliverable": "semana de acolhimento",
+		"type": "🚀 kickoff",
+		"href": "https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf",
+		"dueDate": "2020/09/11 8:00"
+	}, {
 		"uc": "---",
 		"deliverable": "pedido de estatuto trabalhador-estudante",
 		"type": "🔥 deadline",
-		"dueDate": "2020/10/14 17:00"
-	}, {
-		"uc": "BPM",
-		"deliverable": "matrícula",
-		"type": "🔥 deadline",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2301_2020_03_01?csf=1&web=1&e=k1nymd",
-		"dueDate": "2020/07/14 17:00"
-	}, {
-		"uc": "ISPM",
-		"deliverable": "matrícula",
-		"type": "🔥 deadline",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2302_2020_03_08?csf=1&web=1&e=Fc0T2i",
-		"dueDate": "2020/07/14 17:00"
-	}, {
-		"uc": "IS1",
-		"deliverable": "matrícula",
-		"type": "🔥 deadline",
-		"dueDate": "2020/07/14 17:00"
+		"href": "https://graduacao.tecnico.ulisboa.pt/en/alunos/estatuto-de-trabalhador-estudante/",
+		"startDate": "2020/09/07 8:00",
+		"dueDate": "2020/10/19 0:00"
 	}, {
 		"uc": "BPM",
 		"deliverable": "arranque",
 		"type": "🚀 kickoff",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2301_2020_03_01?csf=1&web=1&e=k1nymd",
-		"dueDate": "2020/09/14 17:00"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2019-2020/1-semestre",
+		"dueDate": "2020/09/14 8:00"
 	}, {
 		"uc": "ISPM",
 		"deliverable": "arranque",
 		"type": "🚀 kickoff",
-		"href": "https://ulisboa-my.sharepoint.com/:f:/r/personal/ist197096_tecnico_ulisboa_pt/Documents/EA/homework/ps%2302_2020_03_08?csf=1&web=1&e=Fc0T2i",
-		"dueDate": "2020/09/14 17:00"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre",
+		"dueDate": "2020/09/16 8:00"
 	}, {
 		"uc": "IS1",
 		"deliverable": "arranque",
 		"type": "🚀 kickoff",
-		"dueDate": "2020/09/14 17:00"
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2019-2020/1-semestre",
+		"dueDate": "2020/09/16 8:00"
 	}, {
 		"uc": "ISM",
 		"deliverable": "publicação de notas",
 		"type": "🥇 grades",
-		"dueDate": "2020/06/12 20:00"
+		"href": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXGs459752GjnAtHURMdCVc0BsKHR1XuW8MNz-NNA4bSm8h29C-gM3k4M6tG6MiOqe3-QWZT4QYPdh/pubhtml?gid=2035434980&single=true",
+		"dueDate": "2020/06/12 23:59"
+	}, {
+		"uc": "DS",
+		"deliverable": "Exame: Inscrição em época especial",
+		"type": "🔥 deadline",
+		"startDate": "2020/07/13 12:00",
+		"dueDate": "2020/07/16 12:00"
 	}, {
 		"uc": "DS",
 		"deliverable": "Exame: Época Especial",
@@ -98,7 +124,7 @@
 		"name": "Gestão de Projectos Informáticos",
 		"nameEn": "Information Systems Project Management",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/GPI7/2020-2021/1-semestre",
-		"undefined": "2020-2021_s1"
+		"undefined": "https://fenix.tecnico.ulisboa.pt/publico/viewCourseResults.do?executionCourseID=1408985496305675°reeCurricularPlanOID=284056252055554"
 	}, {
 		"uc": "NL",
 		"name": "Língua Natural",
