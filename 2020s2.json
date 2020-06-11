@@ -1,1 +1,168 @@
-[{"rel":"title","values":[{"title":"IST/MEIC ??"}]},{"rel":"deliverables","values":[{"uc":"BPM","deliverable":"matr°cula","type":"?? deadline","href":"https://fenix.tecnico.ulisboa.pt/student/enroll/courses","startDate":"2020/09/02 12:00","dueDate":"2020/09/07 12:00"},{"uc":"ISPM","deliverable":"matr°cula","type":"?? deadline","href":"https://fenix.tecnico.ulisboa.pt/student/enroll/courses","startDate":"2020/09/02 12:00","dueDate":"2020/09/07 12:00"},{"uc":"IS1","deliverable":"matr°cula","type":"?? deadline","href":"https://fenix.tecnico.ulisboa.pt/student/enroll/courses","startDate":"2020/09/02 12:00","dueDate":"2020/09/07 12:00"},{"uc":"---","deliverable":"in°cio ano escolar 2020-2021","type":"?? kickoff","href":"https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf","dueDate":"2020/09/07 8:00"},{"uc":"---","deliverable":"semana de acolhimento","type":"?? kickoff","href":"https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf","dueDate":"2020/09/11 8:00"},{"uc":"---","deliverable":"pedido de estatuto trabalhador-estudante","type":"?? deadline","href":"https://graduacao.tecnico.ulisboa.pt/en/alunos/estatuto-de-trabalhador-estudante/","startDate":"2020/09/07 8:00","dueDate":"2020/10/19 0:00"},{"uc":"BPM","deliverable":"arranque","type":"?? kickoff","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2019-2020/1-semestre","dueDate":"2020/09/14 8:00"},{"uc":"ISPM","deliverable":"arranque","type":"?? kickoff","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre","dueDate":"2020/09/16 8:00"},{"uc":"IS1","deliverable":"arranque","type":"?? kickoff","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2019-2020/1-semestre","dueDate":"2020/09/16 8:00"},{"uc":"ISM","deliverable":"publicaá∆o de notas","type":"?? grades","href":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTXGs459752GjnAtHURMdCVc0BsKHR1XuW8MNz-NNA4bSm8h29C-gM3k4M6tG6MiOqe3-QWZT4QYPdh/pubhtml?gid=2035434980&single=true","dueDate":"2020/06/12 23:59"},{"uc":"DS","deliverable":"Exame: Inscriá∆o em Çpoca especial","type":"?? deadline","startDate":"2020/07/13 12:00","dueDate":"2020/07/16 12:00"},{"uc":"DS","deliverable":"Exame: Publicaá∆o de datasets para projeto","type":"?? project","startDate":"2020/06/15 0:00","dueDate":"2020/06/15 23:59"},{"uc":"DS","deliverable":"Exame: Entrega de relat¢rio de an†lise","type":"?? project","startDate":"2020/07/16 0:00","dueDate":"2020/07/09 23:59"},{"uc":"DS","deliverable":"Exame: êpoca Especial","type":"? exam","dueDate":"2020/07/17 9:00"}]},{"rel":"ucs","values":[{"uc":"---","name":"---","nameEn":"---","href":"#","undefined":"---"},{"uc":"BPM","name":"Engenharia e Tecnologia de Processos de Neg¢cio","nameEn":"Business Process Management","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2020-2021/1-semestre","undefined":"2020-2021_s1"},{"uc":"DS","name":"Ciància de Dados","nameEn":"Data Science","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre","undefined":"2019-2020_s1"},{"uc":"EA","name":"Arquitetura Empresarial","nameEn":"Enterprise Architecture","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre","undefined":"2019-2020_s2"},{"uc":"IS1","name":"Portfolio Pessoal 1","nameEn":"Independent Studies 1","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2020-2021/1-semestre","undefined":"2020-2021_s1"},{"uc":"ISM","name":"Gest∆o de Sistemas de Informaá∆o","nameEn":"Information Systems Management","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre","undefined":"2019-2020_s2"},{"uc":"ISPM","name":"Gest∆o de Projectos Inform†ticos","nameEn":"Information Systems Project Management","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/GPI7/2020-2021/1-semestre","undefined":"https://fenix.tecnico.ulisboa.pt/publico/viewCourseResults.do?executionCourseID=1408985496305675¯reeCurricularPlanOID=284056252055554"},{"uc":"NL","name":"L°ngua Natural","nameEn":"Natural Language","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/LN13/2019-2020/1-semestre","undefined":"2019-2020_s1"},{"uc":"PLID","name":"Planeamento, Aprendizagem e Decis∆o Inteligente","nameEn":"Planning, Learning and Intelligent Decision-Making","href":"https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre","undefined":"2019-2020_s1"}]},{"rel":"links","values":[{"description":"Link para p†gina de submiss∆o de projetos no FÇnix","href":"https://fenix.tecnico.ulisboa.pt/student/submit/projects"},{"description":"Link para Toggl","href":"https://toggl.com/app/timer"},{"description":"Videoconference ABS (ID da reuni∆o: 861-829-1787)","href":"https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"},{"description":"Link para fonte de dados","href":"https://docs.google.com/spreadsheets/d/1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM/edit#gid=0"}]}] 
+[{
+	"rel": "title",
+	"values": [{
+		"title": "IST/MEIC üéì"
+	}]
+}, {
+	"rel": "deliverables",
+	"values": [{
+		"uc": "BPM",
+		"deliverable": "matr√≠cula",
+		"type": "üî• deadline",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
+		"startDate": "2020/09/02 12:00",
+		"dueDate": "2020/09/07 12:00"
+	}, {
+		"uc": "ISPM",
+		"deliverable": "matr√≠cula",
+		"type": "üî• deadline",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
+		"startDate": "2020/09/02 12:00",
+		"dueDate": "2020/09/07 12:00"
+	}, {
+		"uc": "IS1",
+		"deliverable": "matr√≠cula",
+		"type": "üî• deadline",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
+		"startDate": "2020/09/02 12:00",
+		"dueDate": "2020/09/07 12:00"
+	}, {
+		"uc": "---",
+		"deliverable": "in√≠cio ano escolar 2020-2021",
+		"type": "üöÄ kickoff",
+		"href": "https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf",
+		"dueDate": "2020/09/07 8:00"
+	}, {
+		"uc": "---",
+		"deliverable": "semana de acolhimento",
+		"type": "üöÄ kickoff",
+		"href": "https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf",
+		"dueDate": "2020/09/11 8:00"
+	}, {
+		"uc": "---",
+		"deliverable": "pedido de estatuto trabalhador-estudante",
+		"type": "üî• deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/en/alunos/estatuto-de-trabalhador-estudante/",
+		"startDate": "2020/09/07 8:00",
+		"dueDate": "2020/10/19 0:00"
+	}, {
+		"uc": "BPM",
+		"deliverable": "arranque",
+		"type": "üöÄ kickoff",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2019-2020/1-semestre",
+		"dueDate": "2020/09/14 8:00"
+	}, {
+		"uc": "ISPM",
+		"deliverable": "arranque",
+		"type": "üöÄ kickoff",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre",
+		"dueDate": "2020/09/16 8:00"
+	}, {
+		"uc": "IS1",
+		"deliverable": "arranque",
+		"type": "üöÄ kickoff",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2019-2020/1-semestre",
+		"dueDate": "2020/09/16 8:00"
+	}, {
+		"uc": "ISM",
+		"deliverable": "publica√ß√£o de notas",
+		"type": "ü•á grades",
+		"href": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXGs459752GjnAtHURMdCVc0BsKHR1XuW8MNz-NNA4bSm8h29C-gM3k4M6tG6MiOqe3-QWZT4QYPdh/pubhtml?gid=2035434980&single=true",
+		"dueDate": "2020/06/12 23:59"
+	}, {
+		"uc": "DS",
+		"deliverable": "Exame: Inscri√ß√£o em √©poca especial",
+		"type": "üî• deadline",
+		"startDate": "2020/07/13 12:00",
+		"dueDate": "2020/07/16 12:00"
+	}, {
+		"uc": "DS",
+		"deliverable": "Exame: Publica√ß√£o de datasets para projeto",
+		"type": "üìê project",
+		"startDate": "2020/06/15 0:00",
+		"dueDate": "2020/06/15 23:59"
+	}, {
+		"uc": "DS",
+		"deliverable": "Exame: Entrega de relat√≥rio de an√°lise",
+		"type": "üìê project",
+		"startDate": "2020/07/16 0:00",
+		"dueDate": "2020/07/09 23:59"
+	}, {
+		"uc": "DS",
+		"deliverable": "Exame: √âpoca Especial",
+		"type": "‚úç exam",
+		"dueDate": "2020/07/17 9:00"
+	}]
+}, {
+	"rel": "ucs",
+	"values": [{
+		"uc": "---",
+		"name": "---",
+		"nameEn": "---",
+		"href": "#",
+		"undefined": "---"
+	}, {
+		"uc": "BPM",
+		"name": "Engenharia e Tecnologia de Processos de Neg√≥cio",
+		"nameEn": "Business Process Management",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2020-2021/1-semestre",
+		"undefined": "2020-2021_s1"
+	}, {
+		"uc": "DS",
+		"name": "Ci√™ncia de Dados",
+		"nameEn": "Data Science",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/CDadosi7/2019-2020/1-semestre",
+		"undefined": "2019-2020_s1"
+	}, {
+		"uc": "EA",
+		"name": "Arquitetura Empresarial",
+		"nameEn": "Enterprise Architecture",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/AEmp264/2019-2020/2-semestre",
+		"undefined": "2019-2020_s2"
+	}, {
+		"uc": "IS1",
+		"name": "Portfolio Pessoal 1",
+		"nameEn": "Independent Studies 1",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2020-2021/1-semestre",
+		"undefined": "2020-2021_s1"
+	}, {
+		"uc": "ISM",
+		"name": "Gest√£o de Sistemas de Informa√ß√£o",
+		"nameEn": "Information Systems Management",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre",
+		"undefined": "2019-2020_s2"
+	}, {
+		"uc": "ISPM",
+		"name": "Gest√£o de Projectos Inform√°ticos",
+		"nameEn": "Information Systems Project Management",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/GPI7/2020-2021/1-semestre",
+		"undefined": "https://fenix.tecnico.ulisboa.pt/publico/viewCourseResults.do?executionCourseID=1408985496305675¬∞reeCurricularPlanOID=284056252055554"
+	}, {
+		"uc": "NL",
+		"name": "L√≠ngua Natural",
+		"nameEn": "Natural Language",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/LN13/2019-2020/1-semestre",
+		"undefined": "2019-2020_s1"
+	}, {
+		"uc": "PLID",
+		"name": "Planeamento, Aprendizagem e Decis√£o Inteligente",
+		"nameEn": "Planning, Learning and Intelligent Decision-Making",
+		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PADInt.7/2019-2020/1-semestre",
+		"undefined": "2019-2020_s1"
+	}]
+}, {
+	"rel": "links",
+	"values": [{
+		"description": "Link para p√°gina de submiss√£o de projetos no F√©nix",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/submit/projects"
+	}, {
+		"description": "Link para Toggl",
+		"href": "https://toggl.com/app/timer"
+	}, {
+		"description": "Videoconference ABS (ID da reuni√£o: 861-829-1787)",
+		"href": "https://us02web.zoom.us/j/8618291787?pwd=NDdEZlBWYnNNcDhrWFdLVEdVQ0NNdz09"
+	}, {
+		"description": "Link para fonte de dados",
+		"href": "https://docs.google.com/spreadsheets/d/1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM/edit#gid=0"
+	}]
+}]
