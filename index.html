@@ -35,15 +35,45 @@
 		</div>
 	</div>
 
+	<!-- Firebase aaa -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase-app.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase-auth.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase-database.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase-analytics.min.js"></script> -->
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyCIcZrOa-_B_BM8jF5u4bRkHmVREfkrlII",
+			authDomain: "istabs-01.firebaseapp.com",
+			databaseURL: "https://istabs-01.firebaseio.com",
+			projectId: "istabs-01",
+			storageBucket: "istabs-01.appspot.com",
+			messagingSenderId: "sender-id",
+			appId: "1:841003678859:web:cac336afe2d2f3a8ace88e",
+			measurementId: "G-measurement-id",
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
 	<script>
 		// ?gs=1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM
 
 		// WORKSHEETS
-		const GSHEETDB = [
-			{ tag: "title", loi: ["title"] },
-			{ tag: "deliverables", loi: ["uc", "deliverable", "type", "href", "startDate", "dueDate"] },
-			{ tag: "ucs", loi: ["uc", "name", "nameEn", "href"] },
-			{ tag: "links", loi: ["description", "href"] }
+		const GSHEETDB = [{
+				tag: "title",
+				loi: ["title"]
+			},
+			{
+				tag: "deliverables",
+				loi: ["uc", "deliverable", "type", "href", "startDate", "dueDate"]
+			},
+			{
+				tag: "ucs",
+				loi: ["uc", "name", "nameEn", "href"]
+			},
+			{
+				tag: "links",
+				loi: ["description", "href"]
+			}
 		];
 		const URL_TEMPLATE = "https://spreadsheets.google.com/feeds/cells/%s/%s/public/full?alt=json";
 
@@ -60,80 +90,106 @@
 		}
 
 		function composeTable(data) {
-			with (ucsDict = [], deliverables = [], tableData = []) {
+			with(ucsDict = [], deliverables = [], tableData = []) {
 				for (let entry of data) {
-					switch(entry.rel) { 
-						case "ucs": for (let uc of entry.values) ucsDict[uc.uc] = uc; break;
-						case "deliverables": deliverables = entry.values; break;
-				}	}
+					switch (entry.rel) {
+						case "ucs":
+							for (let uc of entry.values) ucsDict[uc.uc] = uc;
+							break;
+						case "deliverables":
+							deliverables = entry.values;
+							break;
+					}
+				}
 				for (deliverable of deliverables) {
-					with (dueDate = new Date(deliverable.dueDate),
+					with(dueDate = new Date(deliverable.dueDate),
 						dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', dueDate.getFullYear(),
-						dueDate.getMonthNr(), dueDate.getDate(), dueDate.getHours(), dueDate.getMinutes(),
-						dueDate.getWeekNr(), dueDate.getWeekDay()),
+							dueDate.getMonthNr(), dueDate.getDate(), dueDate.getHours(), dueDate.getMinutes(),
+							dueDate.getWeekNr(), dueDate.getWeekDay()),
 						deltaDays = new Date().diff(dueDate), isFuture = new Date().isFuture(dueDate)) {
 						if (isFuture) {
 							tableData.push({
 								uc: deliverable.uc,
-								uc_link: "href" in ucsDict[deliverable.uc] ? ucsDict[deliverable.uc].href : "#",
+								uc_link: "href" in ucsDict[deliverable.uc] ? ucsDict[deliverable.uc].href :
+									"#",
 								deliverable: deliverable.deliverable,
 								link: "href" in deliverable ? deliverable.href : "goback.html",
-								type: deliverable.type, days: deltaDays, timer: deltaDays, dueDate: dueDateString
-				});	}	}	}
+								type: deliverable.type,
+								days: deltaDays,
+								timer: deltaDays,
+								dueDate: dueDateString
+							});
+						}
+					}
+				}
 				normalizeTimer(tableData)
 				return tableData;
-		}	}
-
-		var urlParameters = new URLSearchParams(window.location.search);
-		if (! urlParameters.has("data") && ! urlParameters.has("gs")) { // gsheets ID
-			document.getElementById("dropOuterMsgHere").innerHTML = "usage: ?[gs=GoogleSheetsId[&dump]][data=JSONresourseUrl][usage]";
+			}
 		}
 
+		const usgMsg = "usage: ?[gs=GoogleSheetsId[&dump]][data=JSONresourseUrl][fb][usage]";
+
+		var urlParameters = new URLSearchParams(window.location.search);
+		if (!urlParameters.has("data") && !urlParameters.has("gs") && !urlParameters.has("fb")) {
+			document.getElementById("dropOuterMsgHere").innerHTML = usgMsg;
+		}
+
+		let isFb = urlParameters.has("fb");
 		let isJson = urlParameters.has("data");
 		let isGSheet = urlParameters.has("gs");
 		let isDumpJson = isGSheet && urlParameters.has("dump");
-		let isUsage = ! (isJson || isGSheet);
 		let urlParameter = urlParameters.get(isJson ? "data" : "gs");
 
-		new Promise( res => { // read json from Gsheets or json file
-			if (isUsage) {
-				document.getElementById("dropOuterMsgHere").innerHTML = "usage: ?[gs=GoogleSheetsId[&dump]][data=JSONresourseUrl][usage]";
+		new Promise(res => { // read json from firebase, Gsheets or json file
+			if (!(isJson || isGSheet || isFb)) {
+				document.getElementById("dropOuterMsgHere").innerHTML = usgMsg;
 				return;
 			}
-			if (isJson) {
+			if (isFb) {
+				var database = firebase.database();
+				if (firebase.auth().currentUser) {
+					var userId = firebase.auth().currentUser.uid;
+					console.log(userId);
+				}
+				firebase.database().ref('/').once('value').then(function (snapshot) {
+					res(snapshot.val() && snapshot.val());
+				});
+			} else if (isJson) {
 				var dataUrl = urlParameter;
 				res($.getJSON(dataUrl));
 			} else {
 				res(Promise.all([
-					dataReader(buildGsheetUrl(urlParameter, 1), { db: GSHEETDB }),
-					dataReader(buildGsheetUrl(urlParameter, 2), { db: GSHEETDB }),
-					dataReader(buildGsheetUrl(urlParameter, 3), { db: GSHEETDB }),
-					dataReader(buildGsheetUrl(urlParameter, 4), { db: GSHEETDB })
+					dataReader(buildGsheetUrl(urlParameter, 1), {db: GSHEETDB}),
+					dataReader(buildGsheetUrl(urlParameter, 2), {db: GSHEETDB}),
+					dataReader(buildGsheetUrl(urlParameter, 3), {db: GSHEETDB}),
+					dataReader(buildGsheetUrl(urlParameter, 4), {db: GSHEETDB})
 				]));
 			}
-		}).then( res => {
+		}).then(res => {
 			if (!res) return;
 			if (isDumpJson) {
 				document.getElementById("dropOuterMsgHere").innerHTML = JSON.stringify(res);
 				return;
 			} else
 				return res;
-		}).then( res => { // set the titles
+		}).then(res => { // set the titles
 			if (!res) return;
 			for (let i in res) {
-				if (res[i].rel === "title" && ! res[i].hasOwnProperty("value")) {
+				if (res[i].rel === "title" && !res[i].hasOwnProperty("value")) {
 					res[i] = {
 						rel: res[i].rel,
 						value: res[i].values[0].title
-			};	}	}
+					};
+				}
+			}
 			return res;
-		}).then( res => { // filter and align the data
+		}).then(res => { // filter and align the data
 			if (!res) return;
 			res.forEach(rec => {
 				if (rec.hasOwnProperty("rel") && rec.rel === "title")
 					document.getElementById("dropTitleHere").innerHTML = rec.value;
 			});
-			with (deliverables = [], ucs = [], links = []) {
+			with(deliverables = [], ucs = [], links = []) {
 				for (i = 0; i < res.length; i++) {
 					if (res[i].target === "deliverables") deliverables = res[i].values;
 					if (res[i].target === "ucs") ucs = res[i].values;
@@ -147,39 +203,86 @@
 					movableColumns: true,
 					responsiveLayout: "hide",
 					height: 561,
-					initialSort: [{ column: "timer", dir: "asc" }],
-					columns: [
-						{ title: "UC", field: "uc", width: 60, headerFilter: true, formatter: "link",
-						formatterParams: { labelField: "uc", target: "_blank", urlField: "uc_link" } },
-						{ title: "Deliverable", field: "deliverable", formatter: "link",
-						formatterParams: { labelField: "deliverable", target: "_blank", urlField: "link" } },
-						{ title: "Deliverable Type", field: "type", width: 112, },
-						{ title: "Due date", field: "dueDate", },
-						{ title: "Days left", field: "days", align: "right", width: 75, },
-						{ title: "Timer", field: "timer", minWidth: 280, formatter: "progress", align: "right", },
-				],	});
+					initialSort: [{
+						column: "timer",
+						dir: "asc"
+					}],
+					columns: [{
+							title: "UC",
+							field: "uc",
+							width: 60,
+							headerFilter: true,
+							formatter: "link",
+							formatterParams: {
+								labelField: "uc",
+								target: "_blank",
+								urlField: "uc_link"
+							}
+						},
+						{
+							title: "Deliverable",
+							field: "deliverable",
+							formatter: "link",
+							formatterParams: {
+								labelField: "deliverable",
+								target: "_blank",
+								urlField: "link"
+							}
+						},
+						{
+							title: "Deliverable Type",
+							field: "type",
+							width: 112,
+						},
+						{
+							title: "Due date",
+							field: "dueDate",
+						},
+						{
+							title: "Days left",
+							field: "days",
+							align: "right",
+							width: 75,
+						},
+						{
+							title: "Timer",
+							field: "timer",
+							minWidth: 280,
+							formatter: "progress",
+							align: "right",
+						},
+					],
+				});
 			}
 			return res;
-		}).then( res => {
+		}).then(res => {
 			if (!res) return;
-			with (ucs = [], links = [], html_links = "<h2>Links</h2><ul>") {
+			with(ucs = [], links = [], html_links = "<h2>Links</h2><ul>") {
 				for (let rec of res) {
 					if (rec.rel == "ucs") ucs = rec.values;
 					if (rec.rel == "links") links = rec.values;
 				}
 				for (link of links)
-					html_links += '<li><a href="' + link.href + '" target="_blank">' + link.description + '</a></li>'
+					html_links += '<li><a href="' + link.href + '" target="_blank">' + link.description +
+					'</a></li>'
 				html_links += "</ul>"
 				document.getElementById("dropLinksHere").innerHTML = html_links;
 			}
 			return res;
-		}).then( res => {
+		}).then(res => {
 			if (!res) return;
+
 			function getCustomNow() {
 				let now = new Date();
-				return { weeknr: now.getWeekNr(), weekday: now.getWeekDay(),
-					year: now.getFullYear(), month: now.getMonthNr(), day: now.getDate(),
-					hours: now.getHours(), mins: now.getMinutes() }
+				return {
+					weeknr: now.getWeekNr(),
+					weekday: now.getWeekDay(),
+					year: now.getFullYear(),
+					month: now.getMonthNr(),
+					day: now.getDate(),
+					hours: now.getHours(),
+					mins: now.getMinutes()
+				}
 			}
 
 			const oneMin = 60000;
