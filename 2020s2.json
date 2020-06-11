@@ -6,22 +6,29 @@
 }, {
 	"rel": "deliverables",
 	"values": [{
+		"uc": "---",
+		"deliverable": "período de matrículas",
+		"type": "🔥 deadline",
+		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
+		"startDate": "2020/09/02 12:00",
+		"dueDate": "2020/09/07 12:00"
+	}, {
 		"uc": "BPM",
-		"deliverable": "matrícula",
+		"deliverable": "matrícula BPM",
 		"type": "🔥 deadline",
 		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
 		"startDate": "2020/09/02 12:00",
 		"dueDate": "2020/09/07 12:00"
 	}, {
 		"uc": "ISPM",
-		"deliverable": "matrícula",
+		"deliverable": "matrícula ISPM",
 		"type": "🔥 deadline",
 		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
 		"startDate": "2020/09/02 12:00",
 		"dueDate": "2020/09/07 12:00"
 	}, {
 		"uc": "IS1",
-		"deliverable": "matrícula",
+		"deliverable": "matrícula IS1",
 		"type": "🔥 deadline",
 		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
 		"startDate": "2020/09/02 12:00",
@@ -37,61 +44,75 @@
 		"deliverable": "semana de acolhimento",
 		"type": "🚀 kickoff",
 		"href": "https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf",
-		"dueDate": "2020/09/11 8:00"
+		"startDate": "2020/09/07 8:00",
+		"dueDate": "2020/09/11 8:00",
+		"undefined": "2020/09/11 8:00"
 	}, {
 		"uc": "---",
 		"deliverable": "pedido de estatuto trabalhador-estudante",
 		"type": "🔥 deadline",
 		"href": "https://graduacao.tecnico.ulisboa.pt/en/alunos/estatuto-de-trabalhador-estudante/",
 		"startDate": "2020/09/07 8:00",
-		"dueDate": "2020/10/19 0:00"
+		"dueDate": "2020/10/19 0:00",
+		"undefined": "2020/10/19 0:00"
 	}, {
 		"uc": "BPM",
-		"deliverable": "arranque",
+		"deliverable": "arranque BPM",
 		"type": "🚀 kickoff",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2019-2020/1-semestre",
-		"dueDate": "2020/09/14 8:00"
+		"startDate": "2020/09/14 8:00",
+		"dueDate": "2020/09/14 8:00",
+		"undefined": "2020/09/07 8:00"
 	}, {
 		"uc": "ISPM",
-		"deliverable": "arranque",
+		"deliverable": "arranque ISPM",
 		"type": "🚀 kickoff",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre",
-		"dueDate": "2020/09/16 8:00"
+		"startDate": "2020/09/16 8:00",
+		"dueDate": "2020/09/16 8:00",
+		"undefined": "2020/09/16 8:00"
 	}, {
 		"uc": "IS1",
-		"deliverable": "arranque",
+		"deliverable": "arranque IS1",
 		"type": "🚀 kickoff",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2019-2020/1-semestre",
-		"dueDate": "2020/09/16 8:00"
+		"startDate": "2020/09/16 8:00",
+		"dueDate": "2020/09/16 8:00",
+		"undefined": "2020/09/16 8:00"
 	}, {
 		"uc": "ISM",
 		"deliverable": "publicação de notas",
 		"type": "🥇 grades",
 		"href": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXGs459752GjnAtHURMdCVc0BsKHR1XuW8MNz-NNA4bSm8h29C-gM3k4M6tG6MiOqe3-QWZT4QYPdh/pubhtml?gid=2035434980&single=true",
-		"dueDate": "2020/06/12 23:59"
+		"dueDate": "2020/06/12 23:59",
+		"undefined": "2020/06/12 23:59"
 	}, {
 		"uc": "DS",
 		"deliverable": "Exame: Inscrição em época especial",
 		"type": "🔥 deadline",
 		"startDate": "2020/07/13 12:00",
-		"dueDate": "2020/07/16 12:00"
+		"dueDate": "2020/07/16 12:00",
+		"undefined": "2020/07/16 12:00"
 	}, {
 		"uc": "DS",
-		"deliverable": "Exame: Publicação de datasets para projeto",
+		"deliverable": "Publicação de datasets para projeto",
 		"type": "📐 project",
 		"startDate": "2020/06/15 0:00",
-		"dueDate": "2020/06/15 23:59"
+		"dueDate": "2020/06/15 23:59",
+		"undefined": "2020/06/15 23:59"
 	}, {
 		"uc": "DS",
-		"deliverable": "Exame: Entrega de relatório de análise",
+		"deliverable": "Entrega de relatório de projeto",
 		"type": "📐 project",
 		"startDate": "2020/07/16 0:00",
-		"dueDate": "2020/07/09 23:59"
+		"dueDate": "2020/07/08 23:59",
+		"undefined": "2020/07/08 23:59"
 	}, {
 		"uc": "DS",
 		"deliverable": "Exame: Época Especial",
 		"type": "✍ exam",
-		"dueDate": "2020/07/17 9:00"
+		"dueDate": "2020/07/17 9:00",
+		"undefined": "2020/07/17 11:00"
 	}]
 }, {
 	"rel": "ucs",
