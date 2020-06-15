@@ -11,220 +11,396 @@
 		"type": "🔥 deadline",
 		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
 		"startDate": "2020/09/02 12:00",
-		"dueDate": "2020/09/07 12:00"
+		"dueDate": "2020/09/07 12:00",
+		"undefined": "TRUE"
 	}, {
 		"uc": "BPM",
 		"deliverable": "matrícula BPM",
 		"type": "🔥 deadline",
 		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
 		"startDate": "2020/09/02 12:00",
-		"dueDate": "2020/09/07 12:00"
+		"dueDate": "2020/09/07 12:00",
+		"undefined": "TRUE"
 	}, {
 		"uc": "ISPM",
 		"deliverable": "matrícula ISPM",
 		"type": "🔥 deadline",
 		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
 		"startDate": "2020/09/02 12:00",
-		"dueDate": "2020/09/07 12:00"
+		"dueDate": "2020/09/07 12:00",
+		"undefined": "TRUE"
 	}, {
 		"uc": "IS1",
 		"deliverable": "matrícula IS1",
 		"type": "🔥 deadline",
 		"href": "https://fenix.tecnico.ulisboa.pt/student/enroll/courses",
 		"startDate": "2020/09/02 12:00",
-		"dueDate": "2020/09/07 12:00"
-	}, {
-		"uc": "---",
-		"deliverable": "início ano escolar 2020-2021",
-		"type": "🚀 kickoff",
-		"href": "https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf",
-		"dueDate": "2020/09/07 8:00"
-	}, {
-		"uc": "---",
-		"deliverable": "semana de acolhimento",
-		"type": "🚀 kickoff",
-		"href": "https://conselhopedagogico.tecnico.ulisboa.pt/files/sites/32/calendario-escolar-_2020-2021.pdf",
-		"startDate": "2020/09/07 8:00",
-		"dueDate": "2020/09/11 8:00",
-		"undefined": "2020/09/11 8:00"
+		"dueDate": "2020/09/07 12:00",
+		"undefined": "TRUE"
 	}, {
 		"uc": "---",
 		"deliverable": "pedido de estatuto trabalhador-estudante",
 		"type": "🔥 deadline",
 		"href": "https://graduacao.tecnico.ulisboa.pt/en/alunos/estatuto-de-trabalhador-estudante/",
-		"startDate": "2020/09/07 8:00",
-		"dueDate": "2020/10/19 0:00",
-		"undefined": "2020/10/19 0:00"
+		"startDate": "2020/09/21 0:00",
+		"dueDate": "2020/11/02 0:00",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "início ano escolar 2020-2021",
+		"type": "🚀 kickoff",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"dueDate": "2020/09/21 8:00",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "período de aulas - 1.º semestre",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2020/09/21",
+		"dueDate": "2020/12/18",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "semana de acolhimento",
+		"type": "🚀 kickoff",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2020/12/25 0:00",
+		"dueDate": "2020/12/29 0:00",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "férias de Natal",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2020/12/19",
+		"dueDate": "2021/01/03",
+		"undefined": "FALSE"
+	}, {
+		"uc": "---",
+		"deliverable": "preparação de exames",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/01/04",
+		"dueDate": "2021/01/10",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "exames - época normal",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/01/11",
+		"dueDate": "2021/01/27",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "exames - época recurso",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/02/02",
+		"dueDate": "2021/02/10",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "lançamento de notas 1",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"dueDate": "2021/02/23",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "lançamento de notas 2",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"dueDate": "2021/02/26",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "período de aulas - 2.º semestre",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/03/01",
+		"dueDate": "2021/06/04",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "férias de Páscoa",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/03/29",
+		"dueDate": "2021/04/02",
+		"undefined": "FALSE"
+	}, {
+		"uc": "---",
+		"deliverable": "preparação de exames",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/06/07",
+		"dueDate": "2021/06/13",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "exames - época normal",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/06/14",
+		"dueDate": "2021/06/30",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "exames - época recurso",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/07/06",
+		"dueDate": "2021/07/14",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "lançamento de notas 1",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"dueDate": "2021/07/19",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "exames - época especial",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"startDate": "2021/07/21",
+		"dueDate": "2021/07/27",
+		"undefined": "TRUE"
+	}, {
+		"uc": "---",
+		"deliverable": "lançamento de notas - época especial",
+		"type": "🔥 deadline",
+		"href": "https://graduacao.tecnico.ulisboa.pt/files/sites/54/calendario-2020_21.pdf",
+		"dueDate": "2021/07/31",
+		"undefined": "TRUE"
 	}, {
 		"uc": "BPM",
 		"deliverable": "arranque BPM",
 		"type": "🚀 kickoff",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/ETPN7/2019-2020/1-semestre",
-		"startDate": "2020/09/14 8:00",
-		"dueDate": "2020/09/14 8:00",
-		"undefined": "2020/09/07 8:00"
+		"dueDate": "2020/09/28 8:00",
+		"undefined": "TRUE"
 	}, {
 		"uc": "ISPM",
 		"deliverable": "arranque ISPM",
 		"type": "🚀 kickoff",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/OGFI264/2019-2020/2-semestre",
-		"startDate": "2020/09/16 8:00",
 		"dueDate": "2020/09/16 8:00",
-		"undefined": "2020/09/16 8:00"
+		"undefined": "TRUE"
 	}, {
 		"uc": "IS1",
 		"deliverable": "arranque IS1",
 		"type": "🚀 kickoff",
 		"href": "https://fenix.tecnico.ulisboa.pt/disciplinas/PPes14/2019-2020/1-semestre",
-		"startDate": "2020/09/16 8:00",
 		"dueDate": "2020/09/16 8:00",
-		"undefined": "2020/09/16 8:00"
+		"undefined": "TRUE"
 	}, {
 		"uc": "ISM",
 		"deliverable": "publicação de notas",
 		"type": "🥇 grades",
 		"href": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXGs459752GjnAtHURMdCVc0BsKHR1XuW8MNz-NNA4bSm8h29C-gM3k4M6tG6MiOqe3-QWZT4QYPdh/pubhtml?gid=2035434980&single=true",
 		"dueDate": "2020/06/12 23:59",
-		"undefined": "2020/06/12 23:59"
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Exame: Inscrição em época especial",
 		"type": "🔥 deadline",
-		"startDate": "2020/07/13 12:00",
-		"dueDate": "2020/07/16 12:00",
-		"undefined": "2020/07/16 12:00"
+		"href": "https://tecnico.ulisboa.pt/pt/ensino/estudar-no-tecnico/calendario-escolar/",
+		"startDate": "2020/07/13",
+		"dueDate": "2020/07/30",
+		"undefined": "FALSE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Publicação de datasets para projeto",
 		"type": "📐 project",
-		"startDate": "2020/06/15 0:00",
-		"dueDate": "2020/06/15 23:59",
-		"undefined": "2020/06/15 23:59"
+		"dueDate": "2020/06/15 0:00",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Entrega de relatório de projeto",
 		"type": "📐 project",
 		"startDate": "2020/07/16 0:00",
-		"dueDate": "2020/07/08 23:59",
-		"undefined": "2020/07/08 23:59"
+		"dueDate": "2020/07/08 0:00",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Exame: Época Especial",
 		"type": "✍ exam",
-		"dueDate": "2020/07/17 9:00",
-		"undefined": "2020/07/17 11:00"
+		"href": "https://tecnico.ulisboa.pt/pt/ensino/estudar-no-tecnico/calendario-escolar/",
+		"startDate": "2020/09/01 8:00",
+		"dueDate": "2020/09/01 11:00",
+		"undefined": "FALSE"
 	}, {
 		"uc": "DS",
-		"deliverable": "Data Exploration + Data Visualization",
+		"deliverable": "Data Exploration",
 		"type": "📂 homework",
 		"startDate": "2020/06/12",
-		"dueDate": "2020/06/13",
-		"undefined": "2020/06/13"
+		"dueDate": "2020/06/14",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "Data Visualization",
+		"type": "📂 homework",
+		"startDate": "2020/06/15",
+		"dueDate": "2020/06/17",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Classification",
 		"type": "📂 homework",
-		"startDate": "2020/06/14",
-		"dueDate": "2020/06/14",
-		"undefined": "2020/06/14"
+		"startDate": "2020/06/18",
+		"dueDate": "2020/06/20",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Bayesian learning",
 		"type": "📂 homework",
-		"startDate": "2020/06/15",
-		"dueDate": "2020/06/15",
-		"undefined": "2020/06/15"
+		"startDate": "2020/06/21",
+		"dueDate": "2020/06/23",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Data Balancing and Evaluation",
 		"type": "📂 homework",
-		"startDate": "2020/06/16",
-		"dueDate": "2020/06/17",
-		"undefined": "2020/06/17"
+		"startDate": "2020/06/24",
+		"dueDate": "2020/06/26",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
-		"deliverable": "Decision tree learning + Overfitting",
+		"deliverable": "Decision tree learning",
 		"type": "📂 homework",
-		"startDate": "2020/06/18",
-		"dueDate": "2020/06/20",
-		"undefined": "2020/06/20"
+		"startDate": "2020/06/27",
+		"dueDate": "2020/06/29",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "Overfitting",
+		"type": "📂 homework",
+		"startDate": "2020/06/30",
+		"dueDate": "2020/07/02",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Ensemble classification",
 		"type": "📂 homework",
-		"startDate": "2020/06/21",
-		"dueDate": "2020/06/21",
-		"undefined": "2020/06/21"
+		"startDate": "2020/07/03",
+		"dueDate": "2020/07/05",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
-		"deliverable": "Connectionist and evolutionary learning + Pattern mining",
+		"deliverable": "Connectionist and evolutionary learning",
 		"type": "📂 homework",
-		"startDate": "2020/06/22",
-		"dueDate": "2020/06/25",
-		"undefined": "2020/06/25"
+		"startDate": "2020/07/06",
+		"dueDate": "2020/07/08",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "Pattern mining",
+		"type": "📂 homework",
+		"startDate": "2020/07/09",
+		"dueDate": "2020/07/11",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Sequential pattern mining",
 		"type": "📂 homework",
-		"startDate": "2020/06/26",
-		"dueDate": "2020/06/26",
-		"undefined": "2020/06/26"
+		"startDate": "2020/07/12",
+		"dueDate": "2020/07/14",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
-		"deliverable": "Clustering + High-dimensional data analysis",
+		"deliverable": "Clustering",
 		"type": "📂 homework",
-		"startDate": "2020/06/27",
-		"dueDate": "2020/06/29",
-		"undefined": "2020/06/29"
+		"startDate": "2020/07/15",
+		"dueDate": "2020/07/17",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "High-dimensional data analysis",
+		"type": "📂 homework",
+		"startDate": "2020/07/18",
+		"dueDate": "2020/07/20",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Feature selection and extraction",
 		"type": "📂 homework",
-		"startDate": "2020/06/30",
-		"dueDate": "2020/06/30",
-		"undefined": "2020/06/30"
+		"startDate": "2020/07/21",
+		"dueDate": "2020/07/23",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Biclustering",
 		"type": "📂 homework",
-		"startDate": "2020/07/01",
-		"dueDate": "2020/07/02",
-		"undefined": "2020/07/02"
+		"startDate": "2020/07/24",
+		"dueDate": "2020/07/26",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Regression",
 		"type": "📂 homework",
-		"startDate": "2020/07/03",
-		"dueDate": "2020/07/04",
-		"undefined": "2020/07/04"
+		"startDate": "2020/07/27",
+		"dueDate": "2020/07/29",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
-		"deliverable": "Anomaly detection + Network data analysis + Social and web data analysis",
+		"deliverable": "Anomaly detection",
 		"type": "📂 homework",
-		"startDate": "2020/07/05",
-		"dueDate": "2020/07/07",
-		"undefined": "2020/07/07"
+		"startDate": "2020/07/30",
+		"dueDate": "2020/08/01",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
-		"deliverable": "Time series representations + Temporal data mining",
+		"deliverable": "Network data analysis",
 		"type": "📂 homework",
-		"startDate": "2020/07/08",
-		"dueDate": "2020/07/10",
-		"undefined": "2020/07/10"
+		"startDate": "2020/08/02",
+		"dueDate": "2020/08/04",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "Social and web data analysis",
+		"type": "📂 homework",
+		"startDate": "2020/08/05",
+		"dueDate": "2020/08/07",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "Time series representations",
+		"type": "📂 homework",
+		"startDate": "2020/08/08",
+		"dueDate": "2020/08/10",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "Temporal data mining",
+		"type": "📂 homework",
+		"startDate": "2020/08/11",
+		"dueDate": "2020/08/13",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
 		"deliverable": "Time series forecasting",
 		"type": "📂 homework",
-		"startDate": "2020/07/11",
-		"dueDate": "2020/07/13",
-		"undefined": "2020/07/13"
+		"startDate": "2020/08/14",
+		"dueDate": "2020/08/16",
+		"undefined": "TRUE"
 	}, {
 		"uc": "DS",
-		"deliverable": "Big data + Privacy and ethical concerns",
+		"deliverable": "Big data",
 		"type": "📂 homework",
-		"startDate": "2020/07/14",
-		"dueDate": "2020/07/15",
-		"undefined": "2020/07/15"
+		"startDate": "2020/08/17",
+		"dueDate": "2020/08/19",
+		"undefined": "TRUE"
+	}, {
+		"uc": "DS",
+		"deliverable": "Privacy and ethical concerns",
+		"type": "📂 homework",
+		"startDate": "2020/08/20",
+		"dueDate": "2020/08/22",
+		"undefined": "TRUE"
 	}]
 }, {
 	"rel": "ucs",
@@ -297,5 +473,23 @@
 	}, {
 		"description": "Link para fonte de dados",
 		"href": "https://docs.google.com/spreadsheets/d/1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM/edit#gid=0"
+	}, {
+		"description": "Calendário em Google sheets",
+		"href": "https://istabs.github.io/deliverables/?gs=1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM"
+	}, {
+		"description": "Calendário em Google sheets com dump",
+		"href": "https://istabs.github.io/deliverables/?gs=1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM&dump"
+	}, {
+		"description": "Calendário em Json (2020s2)",
+		"href": "https://istabs.github.io/deliverables/?data=2020s2.json"
+	}, {
+		"description": "Calendário local em Google sheets",
+		"href": "file:///C:/Users/anton/Documents/WorkLocal/IST/UCs/deliverables/index.html?gs=1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM"
+	}, {
+		"description": "Calendário local em Google sheets com dump",
+		"href": "file:///C:/Users/anton/Documents/WorkLocal/IST/UCs/deliverables/index.html?gs=1svNxbDR3mKKmLCdcTmMmj2XaI2bl-bA-cSOVQOO_zaM&dump"
+	}, {
+		"description": "Calendário local em Json (2020s2)",
+		"href": "file:///C:/Users/anton/Documents/WorkLocal/IST/UCs/deliverables/index.html?data=https://istabs.github.io/deliverables/2020s2.json"
 	}]
 }]
