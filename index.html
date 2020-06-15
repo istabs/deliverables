@@ -64,7 +64,7 @@
 			},
 			{
 				tag: "deliverables",
-				loi: ["uc", "deliverable", "type", "href", "startDate", "dueDate"]
+				loi: ["uc", "deliverable", "type", "href", "startDate", "dueDate", "targetDue"]
 			},
 			{
 				tag: "ucs",
@@ -102,7 +102,7 @@
 					}
 				}
 				for (deliverable of deliverables) {
-					with(dueDate = new Date(deliverable.dueDate),
+					with(dueDate = new Date(! deliverable.targetDue || deliverable.targetDue === "TRUE" ? deliverable.dueDate : deliverable.startDate),
 						dueDateString = sprintf('%04d/%02d/%02d %02d:%02d (w%s, %s)', dueDate.getFullYear(),
 							dueDate.getMonthNr(), dueDate.getDate(), dueDate.getHours(), dueDate.getMinutes(),
 							dueDate.getWeekNr(), dueDate.getWeekDay()),
@@ -110,14 +110,14 @@
 						if (isFuture) {
 							tableData.push({
 								uc: deliverable.uc,
-								uc_link: "href" in ucsDict[deliverable.uc] ? ucsDict[deliverable.uc].href :
-									"#",
+								uc_link: "href" in ucsDict[deliverable.uc] ? ucsDict[deliverable.uc].href : "#",
 								deliverable: deliverable.deliverable,
 								link: "href" in deliverable ? deliverable.href : "goback.html",
 								type: deliverable.type,
 								days: deltaDays,
 								timer: deltaDays,
-								dueDate: dueDateString
+								dueDate: dueDateString,
+								legend: deliverable.targetDue || deliverable.targetDue === "TRUE" ? "fim" : "início",
 							});
 						}
 					}
@@ -196,9 +196,10 @@
 					if (res[i].target === "links") links = res[i].links;
 				}
 
+				var table = composeTable(res);
 				new Tabulator("#dropScheduleHere", {
 					layout: "fitDataFill",
-					data: composeTable(res),
+					data: table,
 					tooltips: false,
 					movableColumns: true,
 					responsiveLayout: "hide",
